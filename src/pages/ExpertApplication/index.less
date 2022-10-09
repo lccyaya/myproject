@@ -1,0 +1,98 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.container {
+  height: 100%;
+  background-color: #f66b16;
+  // overflow: hidden;
+
+  .bg_container {
+    background: url('../../assets/mine/application_bg.png') no-repeat;
+    background-size: 100% 251px;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      padding: 27px 36px 10px 36px;
+
+      .header_title01 {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 49px;
+        letter-spacing: 2px;
+      }
+      .header_title02 {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 49px;
+        letter-spacing: 2px;
+      }
+      .header_title03 {
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 39px;
+        letter-spacing: 13px;
+      }
+    }
+  }
+
+  .form_box {
+    margin: 0px 10px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+
+    .form {
+      margin: 14px 10px;
+    }
+    .steps {
+      margin-bottom: 10px;
+    }
+
+    :global {
+      .ant-form-item {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    // input {
+    //   border: none;
+    //   &.error {
+    //     border-bottom: 1px solid #ff4d4f;
+    //   }
+    // }
+    textarea {
+      resize: none;
+    }
+    .note_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .application_note {
+        margin: 56px 10px;
+        color: #fa5900;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: center;
+      }
+      .button {
+        height: 30px;
+        padding: 0 33px;
+        color: #ffffff;
+        font-weight: 400;
+
+        font-size: 15px;
+        line-height: 21px;
+        background: #fa5900;
+        border-radius: 15px;
+      }
+    }
+  }
+}

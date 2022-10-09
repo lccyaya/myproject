@@ -1,0 +1,96 @@
+.expert_list {
+  padding: 0 16px;
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.4);
+    padding: 13px 0;
+    &:last-child {
+      border-bottom: none;
+    }
+    .rank_num {
+      font-size: 18px;
+      font-family: AllRoundGothicW01-Bold, AllRoundGothicW01;
+      font-weight: bold;
+      color: #333;
+      margin-right: 24px;
+    }
+    .avatar {
+      margin-right: 8px;
+    }
+    .name_wrap {
+      font-size: 14px;
+      font-weight: 400;
+      color: #333;
+      width: 150px;
+      .nickname {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .sale {
+        background: #ffe8e8;
+        border-radius: 4px;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #D61E25;
+        margin-left: 4px;
+      }
+    }
+    .nickname_wrap {
+      white-space: nowrap;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .watch_name_wrap {
+      flex: 1;
+      overflow: hidden;
+    }
+    .info {
+      font-size: 12px;
+      font-weight: 400;
+      color: #333;
+      margin-top: 2px;
+      .win_num {
+        color: #D61E25;
+      }
+      .competition {
+        font-size: 11px;
+        padding: 1px 3px;
+        background-color: #F3F4F6;
+        color: #848494;
+        margin-right: 3px;
+      }
+    }
+    .win_rate {
+      font-size: 14px;
+      font-family: Barlow-Bold, Barlow;
+      font-weight: bold;
+      color: #D61E25;
+      line-height: 27px;
+      margin: 0 5px;
+      .win_rate_num {
+        font-size: 18px;
+        font-weight: bold;
+        color: #D61E25;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .watch_item {
+    justify-content: flex-start;
+    .info {
+      color: #999;
+      font-size: 12px;
+      margin-top: 9px;
+      span {
+        margin-right: 4px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,132 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+.container {
+  background-color: #f7fafb;
+
+  .header {
+    padding: 16px 10px;
+
+    .header_title {
+      margin: 0px 0px 14px 0px;
+      color: #000028;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    .lottery_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0px;
+
+      background: #ffffff;
+      border-radius: 5px;
+
+      &.selected {
+        border: 1px solid #fa5900;
+        .lottery_title {
+          color: #fa5900;
+        }
+      }
+
+      .lottery_title {
+        margin-left: 4px;
+        color: #848494;
+        font-weight: 400;
+
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  .scroll_container {
+    height: calc(100vh - 300px);
+    background-color: #fff;
+    border-radius: 8px;
+
+    .time_box {
+      position: sticky;
+      top: 0;
+      display: flex;
+      margin: 0px 10px;
+      padding: 10px 0px;
+      color: #000028;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .match_cell {
+      margin: 16px 10px 0 10px;
+    }
+  }
+
+  .footer {
+    padding: 12px 16px;
+
+    .play_info {
+      display: flex;
+      flex-direction: row;
+      .info_text {
+        margin-right: 20px;
+        color: #45494c;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+    .button_box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .fee_box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .fee {
+          color: #fa5900;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+      .fee_button {
+        padding: 0px;
+        background-color: transparent;
+        border: none;
+        margin-right: 8px;
+
+        .fee_title {
+          margin-right: 5px;
+          color: #45494c;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .next_button {
+        padding: 10px 26px;
+        background-color: #fa5900;
+        border: none;
+        border-radius: 40px;
+
+        .next_title {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}

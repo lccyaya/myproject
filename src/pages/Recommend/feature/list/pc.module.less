@@ -1,0 +1,105 @@
+@import '~@/assets/theme.less';
+
+.list {
+  .item {
+    .date {
+      .day,
+      .divide {
+        color: @font-color-3;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Barlow;
+        line-height: 32px;
+      }
+
+      .month {
+        color: @font-color-3;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: 'Barlow';
+        line-height: 32px;
+      }
+    }
+
+    .content {
+      .matchItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4px;
+        padding: 13px 30px 13px 16px;
+        background: @gray-bg;
+        border-radius: 4px;
+
+        .time {
+          color: @font-color-3;
+          font-size: 14px;
+          font-family: 'PingFang SC';
+          line-height: 22px;
+        }
+
+        .vs {
+          margin-right: 30px;
+          margin-left: 30px;
+          color: @font-color-3;
+          font-weight: bold;
+          font-size: 16px;
+          font-family: 'Barlow';
+          line-height: 28px;
+        }
+        .team_wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 370px;
+        }
+        .team {
+          display: flex;
+          flex: 1;
+
+          &.away {
+            flex-direction: row-reverse;
+
+            .name {
+              text-align: left;
+            }
+          }
+
+          .name {
+            display: inline-block;
+            width: 100px;
+            overflow: hidden;
+            color: @font-color-3;
+            font-size: 14px;
+            font-family: 'PingFang SC';
+            line-height: 38px;
+            white-space: nowrap;
+            text-align: right;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+          }
+
+          .logo {
+            width: 22px;
+            height: 22px;
+            margin: auto 12px;
+            object-fit: contain;
+            vertical-align: baseline;
+          }
+        }
+        .scheme_num {
+          padding: 2px 15px;
+          color: #fff;
+          font-weight: 500;
+          font-size: 14px;
+          background: #d61e25;
+          border-radius: 4px;
+        }
+      }
+
+      .matchItem:hover {
+        background: rgba(57, 144, 106, 0.08);
+      }
+    }
+  }
+}

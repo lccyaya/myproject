@@ -1,0 +1,65 @@
+.main {
+  display: flex;
+  padding-top: 30px;
+  align-items: flex-start;
+  .left{ 
+    flex: 1;
+  }
+  .right {
+    width: 422px;
+    margin-left: 16px;
+  }
+  .trigger_name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+    height: 25px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .icon {
+    transform: rotate(90deg);
+    margin-left: 4px;
+  }
+  section {
+    margin-bottom: 24px;
+  }
+  .content {
+    min-height: 100px;
+  }
+}
+
+.overlayClassName {
+
+ :global {
+  .ant-dropdown-menu {
+    min-width: 114px;
+    background: #FFF;
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08), 0 16px 48px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 0 8px;
+  }
+  .ant-dropdown-menu-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 16px 0;
+    text-align: center;
+    white-space: nowrap;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background: none;
+    }
+    &.ant-dropdown-menu-item-selected {
+      background: none;
+      color: #FA5900;
+    }
+  }
+ }
+}

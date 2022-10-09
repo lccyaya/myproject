@@ -1,0 +1,138 @@
+@import '~antd/es/style/themes/default.less';
+
+.cardContainer {
+  position: relative;
+  width: 100%;
+  height: 144px;
+  padding: 12px 24px;
+  background: @primary-color;
+  border-radius: 16px;
+
+  .iconWrapper {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    display: flex;
+
+    .icon {
+      color: #FA5900;
+      font-size: 18px;
+      vertical-align: top;
+    }
+
+    .iconed {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    // .icon:hover {
+    //   :global(.hoverSVG) {
+    //     stroke: @primary-color;
+    //   }
+    // }
+  }
+
+  .head {
+    height: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    .time {
+      color: #fff;
+      font-size: 12px;
+      font-family: 'PingFang SC Bold';
+      line-height: 24px;
+    }
+
+    .match {
+      color: #fff;
+      font-size: 14px;
+      font-family: 'PingFang SC Bold';
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    .head {
+      height: 48px;
+
+      .time {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .match {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+
+    .vs {
+      color: #fff;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: Barlow;
+      font-style: italic;
+      line-height: 56px;
+      text-align: center;
+    }
+
+    @media (max-width: @screen-xs) {
+      .vs {
+        font-size: 22px;
+      }
+    }
+
+    .logoContainer {
+      display: flex;
+      width: 100%;
+
+      &.right {
+        flex-direction: row-reverse;
+      }
+
+      .logo {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+      }
+
+      .text {
+        margin: 0 10px;
+        overflow: hidden;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'PingFang SC Bold';
+        line-height: 56px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+      @media (max-width: @screen-xs) {
+        .text {
+          font-size: 14px;
+        }
+      }
+
+      .text:hover {
+        overflow: visible;
+
+        .textName {
+          background: @primary-color;
+          border: rgb(200, 200, 200) solid 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .cardContainer {
+    padding: 6px;
+  }
+}

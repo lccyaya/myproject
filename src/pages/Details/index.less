@@ -1,0 +1,122 @@
+@import '~antd/es/style/themes/default.less';
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.main {
+  //margin-top: 16px;
+  .banner {
+    margin: 0 0 16px 0;
+  }
+
+  .container {
+    justify-content: space-between;
+    width: calc(100% + 16px);
+    @media (max-width: @screen-sm) {
+      width: 100%;
+      margin-top: 16px !important;
+    }
+    .left {
+      padding-bottom: 20px;
+      .videoContainer {
+        margin-bottom: 26px;
+      }
+      .tabWrapper {
+        padding-top: 16px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+        @media screen and (max-width: @screen-sm) {
+          width: calc(100% + 16px);
+          margin-left: -8px;
+          padding-top: 0;
+          box-shadow: none;
+        }
+      }
+      .header {
+        height: 48px;
+        padding: 0 20px;
+        //margin-top: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        @media screen and (max-width: @screen-sm) {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          height: 44px;
+          padding: 0 12px;
+          overflow-x: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .tabButton {
+          // width: 72px;
+          height: 28px;
+          margin-right: 20px;
+          padding: 0 20px;
+          color: #666;
+          font-weight: bold;
+          font-size: 12px;
+          font-family: PingFang SC;
+          font-style: normal;
+          line-height: 28px;
+          text-align: center;
+          background-color: #f4f4f4;
+          border-radius: 100px;
+          @media screen and (max-width: @screen-sm) {
+            margin-right: 10px;
+            padding: 0 6px;
+            background-color: transparent;
+          }
+        }
+
+        :global(.ant-tag-checkable-checked) {
+          background-color: #FA5900 !important;
+        }
+
+        :global(.ant-tag-checkable-checked) {
+          color: #fff;
+        }
+      }
+      .tabPanel {
+        padding: 0 9px;
+        .mobileVideoWrapper,
+        .schemeWrapper {
+          width: calc(100% + 18px);
+          margin-bottom: 8px;
+          margin-left: -9px;
+        }
+        .mobileStatTitle {
+          margin-bottom: 12px;
+          color: #46494c;
+          font-size: 18px;
+          font-family: Barlow;
+          font-style: italic;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .right {
+      .tips {
+        margin-top: 24px;
+        color: #46494c;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Barlow;
+        font-style: italic;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+.phone {
+  padding: 0;
+}

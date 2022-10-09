@@ -1,0 +1,43 @@
+.container {
+  background: linear-gradient(173deg, #fd9200 0%, #fa5900 100%);
+  border-radius: 5px;
+
+  .steps_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 33px 33px 33px;
+
+    .item_box {
+      position: relative;
+    }
+
+    .title {
+      position: absolute;
+      width: 100px;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    .circle {
+      width: 26px;
+      height: 26px;
+      // background-color: #fff;
+      border-radius: 26px;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      margin: 6px;
+      background-color: #fff;
+    }
+  }
+}

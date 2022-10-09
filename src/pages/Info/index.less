@@ -1,0 +1,133 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  display: flex;
+  max-width: 1024px;
+  height: calc(100vh - 48px);
+  height: calc(var(--vh, 1vh) * 100 - 48px);
+  margin: auto;
+  overflow: hidden;
+
+  :global(.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .spin {
+    .empty {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .tabButton {
+    min-width: 96px;
+    height: 32px;
+    padding: 0 10px;
+    color: #666;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-style: normal;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 100px;
+  }
+
+  :global(.ant-tag-checkable-checked) {
+    color: #fff;
+  }
+
+  .left {
+    width: 260px;
+    height: 100%;
+  }
+
+  .right {
+    flex: 1;
+    height: 100%;
+    margin-left: -1px;
+    padding-top: 20px;
+    // padding-right: 10px;
+    padding-left: 40px;
+    border-left: 1px #eee solid;
+  }
+
+  @media screen and (max-width: @screen-xs) {
+    .left {
+      width: 80px;
+    }
+
+    .right {
+      padding-top: 0;
+      padding-left: 10px;
+    }
+
+    .menu {
+      width: 100%;
+      height: 24px;
+      // margin-top: 16px;
+      line-height: 24px;
+    }
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .season_name {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+.season_wrap {
+  height: 160px;
+  overflow: scroll;
+}
+.season_list {
+  padding: 5px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+}
+.icon_wrap {
+  width: 12px;
+  height: 12px;
+  background: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 9px;
+}
+
+@media screen and (max-width: @screen-xs) {
+  .main {
+    display: block;
+    padding-bottom: 44px;
+  }
+
+  :global(.ant-menu-horizontal > .ant-menu-submenu) {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    height: 22px !important;
+  }
+
+  :global(.ant-menu-vertical .ant-menu-item:not(:last-child)) {
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  :global(.ant-menu-vertical > .ant-menu-item) {
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

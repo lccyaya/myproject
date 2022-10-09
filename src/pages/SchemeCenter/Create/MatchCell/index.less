@@ -1,0 +1,84 @@
+.container {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    .home_des {
+      color: #848494;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+    }
+    .team_name {
+      margin: 0px 4px;
+      color: #000028;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .info_box {
+    display: flex;
+
+    .match_info {
+      width: 60px;
+
+      .competition_name {
+        color: #fa5900;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+      }
+      .match_time {
+        color: #848494;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+
+    .odds_table {
+      flex: 1;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e6e6e6;
+
+      .odds_row {
+        margin-bottom: 5px;
+      }
+
+      .odds_cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 4px;
+        text-align: center;
+        background-color: #f3f4f6;
+        border-radius: 3px;
+
+        &.disabled {
+          background-color: #E1E1E1;
+        }
+
+        &.selected {
+          background-color: #FA5900;
+
+          .odds_title {
+            color: #fff;
+          }
+        }
+
+        .odds_title {
+          color: #45494c;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import '~antd/es/style/themes/default.less';
+
+.matchContainer {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+  .row {
+    text-align: left;
+
+    .date {
+      margin: 16px 0 8px 0;
+      color: #333;
+      font-weight: 500;
+      font-family: Barlow;
+      font-style: normal;
+      line-height: 32px;
+
+      .date {
+        font-size: 28px;
+      }
+
+      .month {
+        font-size: 18px;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .link {
+        width: 100%;
+        height: 48px;
+
+        .match {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 4px;
+          background: #fafafa;
+          border-radius: 4px;
+          cursor: pointer;
+
+          .time {
+            color: #333333;
+            font-size: 14px;
+            font-family: 'PingFang SC Bold';
+            line-height: 48px;
+            text-align: center;
+          }
+
+          .text {
+            overflow: hidden;
+            color: #333333;
+            font-size: 14px;
+            font-family: 'PingFang SC Bold';
+            line-height: 48px;
+            white-space: nowrap;
+            text-align: center;
+            text-overflow: ellipsis;
+            word-break: break-all;
+
+            @media screen and (max-width: @screen-sm) {
+              font-size: 12px;
+            }
+          }
+
+          .text:hover {
+            overflow: visible;
+
+            .innerText {
+              background: rgb(255, 255, 255);
+              border: rgb(105, 105, 105) solid 1px;
+            }
+          }
+
+          .homeText {
+            padding-left: 16px;
+          }
+
+          .vs {
+            color: #333333;
+            font-size: 14px;
+            font-family: 'PingFang SC Medium';
+            line-height: 48px;
+            text-align: center;
+          }
+
+          .home {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          .away {
+            display: flex;
+          }
+
+          .logo {
+            width: 28px;
+            height: 28px;
+            margin: 10px;
+            object-fit: contain;
+          }
+        }
+
+        .match:hover {
+          background: rgba(57, 144, 106, 0.08);
+        }
+      }
+    }
+  }
+}

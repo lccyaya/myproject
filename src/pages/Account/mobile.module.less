@@ -1,0 +1,64 @@
+@import '~antd/es/style/themes/default.less';
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+.container {
+  .header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    background: #fff;
+    z-index: 10;
+
+    .avatar {
+      height: 49px;
+      width: 49px;
+    }
+
+    .info {
+      margin-left: 16px;
+
+      .nicknameWrapper {
+        display: flex;
+        align-items: center;
+        .item {
+          font-style: 500;
+          font-size: 18px;
+          color: #666;
+
+          &.type {
+            color: @primary-color;
+          }
+          &.divide {
+            padding: 0 12px;
+          }
+        }
+        .nickname {
+          max-width: 150px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+
+      }
+
+      .email {
+        color: #666;
+        font-size: 14px;
+      }
+    }
+  }
+  .body {
+    padding: 0px 10px;
+  }
+}
+
+.warn_tip {
+  margin-top: 24px;
+}

@@ -1,0 +1,315 @@
+@import '~antd/es/style/themes/default.less';
+
+.container {
+  width: 100%;
+
+  .tabsContainer {
+    width: 100%;
+
+    .tabs {
+      font-weight: 200;
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-style: normal;
+      line-height: 16px;
+      background: #fff;
+    }
+
+    .iconContainer {
+      height: 40px;
+      line-height: 40px;
+      text-align: end;
+      border-left: 1px solid #ebebeb;
+
+      .menuIcon {
+        cursor: pointer;
+      }
+
+      .menuIcon:hover {
+        opacity: 0.4;
+      }
+
+    }
+
+    .filterIconContainer {
+      margin-top: 4px;
+      margin-left: 23px;
+      border-left: none;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .menuIcon {
+        height: 100%;
+        width: auto;
+        cursor: pointer;
+      }
+
+      .menuIcon:hover {
+        opacity: 0.4;
+      }
+    }
+
+    @media (max-width: @screen-xs) {
+      .tabs {
+        margin-bottom: 12px;
+      }
+
+      .iconContainer {
+        height: 22px;
+        line-height: 22px;
+      }
+    }
+
+    :global(.ant-tabs-nav::before) {
+      display: none;
+    }
+
+    .switch {
+      text-align: right;
+      margin-left: auto;
+
+      .switchButton {
+        margin-left: auto;
+        background: #FFEBA5;
+        border-radius: 16px;
+        margin-top: 6px;
+        font-family: 'PingFang SC Normal';
+        font-weight: bold;
+        font-size: 14px;
+        //line-height: 22px;
+        text-align: center;
+        color: #454545;
+        vertical-align: top;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        padding: 0 4px;
+        span {
+          margin-top: 1px;
+          margin-right: 4px;
+        }
+
+        @media (max-width: @screen-xs) {
+          margin-top: 2px;
+          height: 24px;
+        }
+      }
+
+      .switchButton:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .matchLIstContainer {
+    justify-content: center;
+    width: 100%;
+
+    .listContainer {
+      width: 100%;
+
+      .dateContainer {
+        color: #333;
+        font-weight: 500;
+        font-family: Barlow;
+        font-style: normal;
+        line-height: 32px;
+        margin-top: 16px;
+
+        @media (max-width: @screen-xs) {
+          margin-top: 0;
+        }
+
+        .date {
+          font-size: 28px;
+        }
+
+        .dayOfWeek {
+          font-size: 22px;
+          color: #666666;
+        }
+
+        .month {
+          font-size: 18px;
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  .footer {
+    justify-content: center;
+    height: 40px;
+    margin-top: 16px;
+    margin-bottom: 50px;
+    color: #333;
+    font-size: 14px;
+    font-family: 'PingFang SC Normal';
+    line-height: 40px;
+    text-align: center;
+    background: #fafafa;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  @media (max-width: @screen-xs) {
+    .footer {
+      margin-bottom: 0;
+    }
+  }
+
+  .footer:hover {
+    background: #fafafa;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+}
+
+:global(.ant-modal-content) {
+  border-radius: 16px;
+}
+
+.editContainer {
+  .modalTitle {
+    margin-bottom: 12px;
+    color: @primary-color;
+    font-size: 24px;
+    font-family: 'PingFang SC Bold';
+    line-height: 32px;
+  }
+
+  .modalSubtitle {
+    margin-bottom: 32px;
+    color: #000;
+    font-size: 16px;
+    font-family: 'PingFang SC Normal';
+    line-height: 24px;
+  }
+
+  .modalContent {
+    .sortableCard {
+      position: relative;
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      margin: 0 4px 8px 4px;
+      color: #333;
+      vertical-align: top;
+      background: #f9f9f9;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .sortableCardTitle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      font-size: 18px;
+      font-family: 'PingFang SC Normal';
+      line-height: 32px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .sortableCard:hover {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .modalFooter {
+    justify-content: flex-end;
+    height: 48px;
+    margin-top: 32px;
+
+    .editButton {
+      float: right;
+      width: 120px;
+      height: 48px;
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    .modalTitle {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    .modalSubtitle {
+      margin-bottom: 20px;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    .modalContent {
+      .sortableCard {
+        width: 82px;
+        height: 82px;
+
+        .sortableCardTitle {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+
+    .modalFooter {
+      height: 32px;
+      margin-top: 6px;
+
+      .editButton {
+        width: 80px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.liveEmpty {
+  width: 250px;
+  height: 200px;
+  background: url('../../assets/image/live_empty.svg') no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto 30px auto;
+  @media screen and (max-width: @screen-xs) {
+    width: 262px;
+    height: 209px;
+    .text {
+      bottom: 24px !important;
+    }
+  }
+  .text {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+}
+
+.upcomingTip {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    background: url('../../assets/icon/hourglass.svg') no-repeat 0 0;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+  }
+  .text {
+    font-size: 18px;
+    color: #7F7F7F;
+    font-weight: 500;
+    margin-left: 6px;
+  }
+}

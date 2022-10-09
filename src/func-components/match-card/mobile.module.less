@@ -1,0 +1,336 @@
+.match_card_box {
+  width: 100%;
+  min-height: 70px;
+  margin: 4px 0;
+  background-color: #fff;
+  .match_card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+  }
+  .match_card_header_left {
+    width: 155px;
+    padding: 6px 12px;
+  }
+  .match_card_header_status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 28px;
+  }
+  .match_card_header_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 155px;
+    padding: 6px 12px;
+  }
+  .macth_subscribe {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .match_card_mid {
+    display: flex;
+  }
+  .match_home,
+  .match_away {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 155px;
+    height: 42px;
+    padding: 12px 8px;
+  }
+  .match_away {
+    justify-content: flex-start;
+  }
+  .match_home_name,
+  .match_away_name {
+    max-width: 89px;
+    padding-right: 0;
+    padding-left: 4px;
+    font-weight: 600;
+  }
+  .match_away_name {
+    padding-right: 4px;
+    padding-left: 0;
+  }
+  .match_red_card {
+    min-width: 12px;
+    height: 16px;
+    padding: 0 3px;
+    color: #fff;
+    font-size: 12px;
+    font-family: Barlow-Bold;
+    line-height: 16px;
+    text-align: center;
+    background-color: #d20004;
+    border-radius: 2px;
+  }
+  .match_home_logo,
+  .match_away_logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+    margin-left: 8px;
+    object-fit: contain;
+  }
+  .match_away_logo {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+  .match_vs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 42px;
+    font-family: Barlow;
+  }
+}
+
+.match_index_box {
+  width: 100%;
+  height: 96px;
+  margin: 4px 0;
+  overflow: hidden;
+  background-color: #fff;
+  .match_index_header {
+    display: flex;
+    align-items: center;
+    height: 28px;
+  }
+  .match_index_header_left {
+    width: 155px;
+  }
+  .match_index_header_right {
+    display: flex;
+    justify-content: flex-end;
+    width: 155px;
+    padding: 0 12px 0 2px;
+  }
+  .match_index_header_status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+  }
+  .match_index_header_tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .match_index_subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  .match_index_body {
+    display: flex;
+    height: 68px;
+  }
+  .match_index_body_left {
+    position: relative;
+    flex: 1;
+    height: 68px;
+  }
+  .match_index_body_left::after {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 1px;
+    height: 54px;
+    background-color: #ddd;
+    content: '';
+  }
+  .match_index_body_right {
+    position: relative;
+    flex: 1;
+    height: 68px;
+  }
+  .match_index_team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding-top: 6px 12px 4px;
+  }
+  .match_index_team_logo {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    object-fit: contain;
+  }
+  .match_index_team_name {
+    width: 108px;
+  }
+  .match_index_team_score {
+    display: flex;
+    justify-content: flex-end;
+    width: 32px;
+    font-family: Barlow;
+  }
+  .match_index_row:first-child {
+    margin-top: 4px;
+  }
+  .match_index_row {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: Barlow-Medium;
+  }
+  .match_index_col {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.score_map {
+  display: flex;
+  width: 100vw;
+  padding-bottom: 10px;
+  color: #969ea6;
+  font-size: 12px;
+  .score_map_left {
+    display: flex;
+    flex-direction: column;
+    width: 155px;
+    .score_map_item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 14px;
+      margin-bottom: 4px;
+      padding-right: 23px;
+    }
+    .score_map_item_before {
+      position: absolute;
+      top: 6px;
+      right: 16px;
+      width: calc(3px);
+      height: calc(3px);
+      background: #c3ccd3;
+      border-radius: 50%;
+    }
+    .score_map_item_before::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 1px;
+      height: 18px;
+      margin-right: -0.5px;
+      background: #c3ccd3;
+      content: '';
+    }
+    .score_map_item:last-child .score_map_item_before::after {
+      display: none;
+    }
+    .score_map_left_name {
+      width: 102px;
+      font-size: 12px;
+      text-align: right;
+    }
+    .score_map_left_logo {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+      object-fit: contain;
+    }
+  }
+
+  .score_map_tags {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 65px;
+  }
+  .score_map_right {
+    display: flex;
+    flex-direction: column;
+    width: 155px;
+    .score_map_item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 14px;
+      margin-bottom: 4px;
+      padding-left: 23px;
+    }
+    .score_map_item_before {
+      position: absolute;
+      top: 6px;
+      left: 16px;
+      width: 3px;
+      height: 3px;
+      background: #c3ccd3;
+      border-radius: 50%;
+    }
+    .score_map_item_before::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 1px;
+      height: 18px;
+      margin-right: -0.5px;
+      background: #c3ccd3;
+      content: '';
+    }
+    .score_map_item:last-child .score_map_item_before::after {
+      display: none;
+    }
+
+    .score_map_right_name {
+      width: 102px;
+      font-size: 12px;
+      text-align: left;
+    }
+    .score_map_right_logo {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-right: 4px;
+      object-fit: contain;
+    }
+  }
+}
+
+.font_size_10 {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  transform-origin: left;
+  // 这边哪怕字体是12px的也可以正常展示,所以可以使用兼容性并不怎么好的zoom属性
+  zoom: 0.83333;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.match_card_ft_tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 16px;
+  color: #999;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 8px;
+}

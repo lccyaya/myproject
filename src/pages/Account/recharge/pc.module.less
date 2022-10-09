@@ -1,0 +1,142 @@
+.recharge {
+  .section {
+    display: flex;
+    margin-bottom: 24px;
+    &.overview {
+      align-items: center;
+    }
+    .content {
+      flex: 1;
+      margin-left: 5px;
+    }
+    .label {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      white-space: nowrap;
+    }
+    .total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .value {
+        font-size: 32px;
+        font-weight: 600;
+        color: #8F5B00;
+        margin-right: 8px;
+      }
+      .tip {
+        font-size: 14px;
+        color: #999;
+      }
+    }
+    .record {
+      font-size: 16px;
+      color: #8B8B8B;
+      cursor: pointer;
+    }
+
+    .select_box {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 4px;
+        border: 1px solid #F8F8F8;;
+        padding: 10px;
+        width: calc(33.33% - 6px);
+        margin-right: 8px;
+        margin-bottom: 8px;
+        background: #F8F8F8;
+        min-height: 78px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &.active {
+          border: 1px solid #FA5900;
+        }
+        &.item_row {
+          flex-direction: row;
+        }
+        .gold_icon {
+          display: flex;
+          align-items: center;
+          position: relative;
+          img {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          .gold_coin_val {
+            font-size: 22px;
+            font-weight: 500;
+            color: #191919;
+            line-height: 30px;
+          }
+          .give_away {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FDA908;
+            position: absolute;
+            width: 40px;
+            right: -44px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+          }
+        }
+        .icon {
+          width: 36px;
+          height: 36px;
+          margin-right: 12px;
+        }
+        .price {
+          font-size: 14px;
+          color: #999;
+          margin-top: 8px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 17px;
+      border-radius: 4px;
+      padding: 6px 32px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .agreement {
+      font-size: 12px;
+      color: #999;
+      margin-top: 16px;
+      a {
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.modal_content {
+  padding-bottom: 10px;
+  .sub_title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8B8B8B;
+    text-align: center;
+  }
+  .qrcode_wrap {
+    width: 180px;
+    height: 180px;
+    display: block;
+    border: none;
+    margin: 32px auto 0;
+  }
+}

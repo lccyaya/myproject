@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px 10px;
+
+  .experts_box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // margin-top: 96px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    .tabs_box {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 20px 10px 0px 10px;
+      background: linear-gradient(105deg, #FF7200 0%, #FA5900 100%);
+      border-radius: 7px;
+
+      .tabs_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .tabs_title {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 33px;
+        }
+        .tabs_active_line {
+          position: absolute;
+          bottom: -8px;
+          font-size: 4px;
+        }
+        img {
+          width: 28px;
+          height: 9px;
+        }
+      }
+    }
+    .scroll_container {
+      flex: 1;
+    }
+  }
+}

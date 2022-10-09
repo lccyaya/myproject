@@ -1,0 +1,98 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+
+  .tip {
+    @media screen and (max-width: @screen-sm) {
+      font-size: 14px;
+    }
+  }
+
+  :global {
+    .@{ant-prefix}-tabs-nav-list {
+      font-size: 16px;
+    }
+  }
+
+  .iconWrapper {
+    border-radius: 36px;
+    background: #f2f2f2;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 24px;
+    @media screen and (max-width: @screen-sm) {
+      padding: 12px;
+    }
+
+    .icon {
+      display: block;
+      height: 24px;
+      width: 24px;
+      border: none;
+    }
+  }
+
+
+  .item {
+    margin-top: 25px;
+    line-height: 22px;
+    text-align: center;
+
+    @media screen and (max-width: @screen-sm) {
+      margin-top: 20px;
+    }
+
+    .tips {
+      line-height: 22px;
+      text-align: left;
+      text-align: center;
+      ;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .loginIcon {
+      margin-top: 20px;
+      line-height: 22px;
+      text-align: center;
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 12px;
+      }
+    }
+
+    .register {
+      float: right;
+    }
+  }
+
+  .prefixIcon {
+    color: #666;
+    font-size: @font-size-base;
+    margin-right: 4px;
+  }
+}
+
+.tip {
+  line-height: 24px;
+  font-size: 'PingFang SC Medium';
+  font-size: 16px;
+  color: #000;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 12px;
+  .switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    span {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '~@/assets/theme.less';
+
+
+.recent {
+  :global(.ant-tabs-ink-bar) {
+    display: none;
+  }
+
+  :global(.ant-tabs-top > .ant-tabs-nav::before) {
+    display: none;
+  }
+
+  :global(.ant-tabs-tab) {
+    padding: 6px !important;
+    background: @gray-bg  !important;
+    color: @font-color-6  !important;
+    border-radius: 6px;
+  }
+
+  :global(.ant-tabs-tab-active) {
+    background: @primary-color  !important;
+    color: white !important;
+
+    .tabName {
+      color: white !important;
+    }
+  }
+
+  :global(.ant-tabs-tab + .ant-tabs-tab){
+    margin: 0 0 0 10px;
+  }
+
+  .tabName {
+    width: 180px;
+    text-align: center;
+  }
+}

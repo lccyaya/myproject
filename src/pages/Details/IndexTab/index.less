@@ -1,0 +1,44 @@
+.smallView {
+  :global {
+    .ant-tabs-top > .ant-tabs-nav::before {
+      border: none;
+    }
+    .ant-tabs-tab {
+      margin-left: 12px;
+      padding: 0 12px;
+      color: #666;
+      height: 26px;
+      line-height: 26px;
+      background: #F5F5F5;
+      border-radius: 13px;
+      font-size: 14px;
+    }
+    .ant-tabs-tab-active {
+      background: #FA5900;
+      .ant-tabs-tab-btn {
+        color: #fff;
+      }
+    }
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  .text {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+  }
+  .arrow {
+    background: url('../../../assets/icon/arrow_right.png') no-repeat 0 0;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+  }
+}

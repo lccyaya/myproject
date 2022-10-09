@@ -1,0 +1,129 @@
+
+.container {
+  background-color: #F7FAFB;
+  background: url(../../assets/mine/top_bg.png) no-repeat;
+  background-size: 100% 155px;
+}
+.followinfo_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px 10px;
+
+  .followitem_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.3%;
+
+    .value_text {
+      color: #000028;
+      font-weight: bold;
+      font-size: 22px;
+      font-family: Barlow-Bold, Barlow;
+      line-height: 26px;
+    }
+    .des_text {
+      margin-top: 4px;
+      color: #848494;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+}
+
+.beaninfo_box {
+  position: relative;
+  padding-bottom: 8px;
+
+  .beaninfo_card {
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px 10px 0px 10px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    background: url(../../assets/mine/bean_card_bg.png) no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+
+    .beanitem_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      border-right: 1px dotted #848494;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .des_text {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+      }
+      .value_text {
+        color: #ffdbb6;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: Barlow-Bold, Barlow;
+        line-height: 29px;
+      }
+      .button {
+        margin-top: 8px;
+        padding: 0px 8px;
+        color: #000028;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        background: linear-gradient(140deg, #fed4a4 0%, #fed484 100%);
+        border-radius: 5px;
+      }
+    }
+  }
+  .beanfoot_bg {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background: url(../../assets/mine/bean_footer_bg.png) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.actions_container {
+  margin: 8px 10px;
+
+  .card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.02);
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .action_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    width: 20%;
+
+    .action_icon {
+      width: 28px;
+      height: 28px;
+    }
+    .action_title {
+      margin-top: 4px;
+      color: #5f6266;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}

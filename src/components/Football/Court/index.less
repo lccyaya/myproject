@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  padding-bottom: 44.7619%;
+
+  .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('~@/assets/icon/court_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .prediction {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    color: #fff;
+    font-family: PingFang SC;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    position: relative;
+    padding-bottom: 200%;
+
+    .content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateY(90);
+      background: url('~@/assets/icon/mobile/court_bg.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

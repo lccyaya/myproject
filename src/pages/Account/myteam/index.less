@@ -1,0 +1,90 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+
+    .cardContainer {
+        width: 25%;
+        height: 112px;
+        padding: 8px;
+
+        .card {
+            width: 100%;
+            height: 100%;
+            background: #FAFAFA;
+            border-radius: 8px;
+            text-align: center;
+
+            .plus {
+                color: @primary-color;
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            .followme {
+                font-family: 'PingFang SC Medium';
+                font-size: 12px;
+                line-height: 20px;
+                color: #333;
+            }
+
+            .logo {
+                width: 56px;
+                height: 56px;
+                margin-top: 20px;
+            }
+
+            .intro {
+                text-align: left;
+
+                .text {
+                    font-family: 'PingFang SC Medium';
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #333;
+                    margin-top: 20px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    word-break: break-all;
+                    overflow: hidden;
+                }
+
+                .text:hover {
+                    overflow: visible;
+
+                    .textName {
+                        background: #fff;
+                        border: rgb(200, 200, 200) solid 1px;
+                    }
+                }
+
+                .button {
+                    font-family: 'PingFang SC Medium';
+                    font-size: 12px;
+                    border-radius: 8px;
+                    height: 24px;
+                    line-height: 20px;
+                    margin-top: 10px;
+
+                    @media (max-width: @screen-xs) {
+                        padding: 0 6px;
+                    }
+                }
+            }
+        }
+
+        .follow {
+            cursor: pointer;
+        }
+
+        .follow:hover {
+            opacity: 0.65;
+        }
+    }
+
+
+    @media (max-width: @screen-xs) {
+        .cardContainer {
+            width: 100%;
+        }
+    }
+}

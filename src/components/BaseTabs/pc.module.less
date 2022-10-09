@@ -1,0 +1,39 @@
+.tab_container {
+ 
+  .more {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+  }
+  :global {
+    .ant-tabs-nav-list {
+      transition: none !important;
+      transform: none !important;
+    }
+    .ant-tabs-nav {
+      &::before {
+        border: none !important;
+      }
+    }
+    .ant-tabs-tab {
+      border: none !important;
+      background: none !important;
+      font-size: 18px !important;
+      font-weight: 500;
+      color: #46494C;
+      transition: none !important;
+    }
+    .ant-tabs-tab-active {
+      font-size: 24px !important;
+      font-weight: 600;
+      color: @primary-color;
+    }
+    .ant-tabs-ink-bar {
+      display: none !important;
+    }
+    .ant-tabs-nav-operations {
+      display: none !important;
+    }
+  }
+}

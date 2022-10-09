@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+
+  .chartPanel {
+    :global {
+      .ant-spin-nested-loading {
+        height: calc(100% - 22px);
+      }
+    }
+    padding: 12px 0;
+    width: 47%;
+    background-color: #fff;
+    border-radius: 8px;
+    flex-shrink: 0;
+    .title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      line-height: 22px;
+      .vs {
+        margin: 0 12px;
+      }
+    }
+
+    .body {
+      .barChartTitle {
+        font-size: 12px;
+        color: #666;
+        line-height: 17px;
+        margin-top: 8px;
+        text-align: center;
+      }
+      .barChartInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &.voteAndOdds {
+          padding: 0 17px;
+        }
+        .info {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 16px;
+          &.home .num {
+            color: #FA5900;
+          }
+          &.away .num {
+            color: #FF0000;
+          }
+          span {
+            color: #6B6B6B;
+            margin-left: 4px;
+          }
+        }
+      }
+      .voteBtns {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+          cursor: pointer;
+          padding: 0 14px;
+          height: 36px;
+          background: #FAFAFA;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 500;
+          &.disabled {
+            cursor: not-allowed;
+          }
+          &.active {
+            background: #d3e5dd;
+          }
+          .text {
+            margin-left: 4px;
+            white-space: nowrap;
+          }
+          &:first-child {
+            color: #FA5900;
+          }
+          &:nth-child(2) {
+            color: #252525;
+          }
+          &:last-child {
+            color: #FF0000;
+          }
+        }
+      }
+    }
+  }
+  .tablePanel {
+    :global {
+      .ant-spin-nested-loading {
+        height: 100%;
+      }
+    }
+    min-height: 270px;
+    padding-top: 12px;
+    margin-left: 12px;
+    flex: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}

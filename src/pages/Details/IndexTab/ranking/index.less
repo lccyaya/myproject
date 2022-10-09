@@ -1,0 +1,200 @@
+@import '~@/assets/theme.less';
+
+.markWrapper {
+  .mark {
+    opacity: 1;
+  }
+}
+
+.mobile {
+  @media screen and (max-width: @screen-sm) {
+    width: 10% !important;
+  }
+}
+
+.mark {
+  position: absolute;
+  top: -21px;
+  left: 0;
+  padding: 0 !important;
+  border-bottom: none !important;
+  opacity: 0;
+  @media screen and (max-width: @screen-sm) {
+    top: -16px;
+    left: 6px;
+    height: 22px;
+  }
+}
+
+.title {
+  position: relative;
+  text-align: center;
+
+  .name {
+    display: inline-block;
+    padding: 0 15px;
+    color: @font-color-6;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 32px;
+    text-align: center;
+    word-wrap: normal;
+    word-break: break-all;
+    border-bottom: none;
+    border-radius: 2px;
+
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+      padding: 0 5px;
+      overflow: hidden;
+      font-size: 12px;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.company {
+  :first-child {
+    border-bottom: 6px #fff solid;
+  }
+
+  &.smallView {
+    div,
+    span {
+      padding: 0 10px;
+      color: #999;
+    }
+    div:first-child {
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+
+  &.home,
+  &.draw {
+    .spot {
+      color: #d80000;
+    }
+  }
+
+  &.away {
+    .spot {
+      color: #FA5900;
+    }
+  }
+
+  div,
+  span {
+    padding: 0 15px;
+
+    color: @font-color-6;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 32px;
+    // text-align: center;
+    border-radius: 2px;
+
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.stats {
+  :global(.ant-table-thead > tr > th) {
+    padding: 3px 15px;
+    text-align: center;
+    background: #fafafa;
+    border: 2px #fff solid;
+
+    @media screen and (max-width: @screen-sm) {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+  &.smallView .title .name {
+    width: 100%;
+    padding: 0 10px;
+    color: #999;
+    line-height: 24px;
+    text-align: left;
+  }
+  &.smallView :global(.ant-table-thead > tr > th) {
+    padding: 3px 10px;
+    text-align: left;
+    background: #fff;
+    border: none;
+    .ant-table-thead > tr > th::before {
+      display: none !important;
+    }
+    &:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+      display: none !important;
+    }
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    padding: 0;
+    // padding: 3px 15px;
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 22px;
+    white-space: nowrap;
+    background: #fafafa;
+    border: 2px #fff solid;
+
+    :hover {
+      // background: red;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+      font-size: 12px;
+    }
+  }
+  &.smallView :global(.ant-table-tbody > tr > td) {
+    color: #999;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  &.smallView :global(.ant-table-tbody > tr:last-child > td) {
+    border: none;
+  }
+
+  .showText {
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+
+    font-family: 'PingFang SC';
+    line-height: 22px;
+
+    @media screen and (max-width: @screen-sm) {
+      font-size: 12px;
+    }
+  }
+
+  .leagueRanking {
+    display: flex;
+    align-items: center;
+
+    .position {
+      color: @font-color-0;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Barlow';
+      font-style: italic;
+      line-height: 26px;
+    }
+
+    .logo {
+      width: 22px;
+      height: 22px;
+      margin: auto 12px;
+      vertical-align: middle;
+    }
+  }
+}

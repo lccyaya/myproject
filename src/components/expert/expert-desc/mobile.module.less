@@ -1,0 +1,112 @@
+.expert_block {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+
+  .desc {
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: #333;
+      font-size: 14px;
+      line-height: 20px;
+      flex: 1;
+    }
+
+
+  }
+  .publish_at {
+    margin-top: 6px;
+    margin-bottom: 11px;
+    color: #8b8b8b;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.4);
+  }
+  .expert {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    .left_box {
+      display: flex;
+      align-items: center;
+    }
+    .avatar {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      margin-right: 8px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .mid {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      height: 46px;
+    }
+    .nickname {
+      display: -webkit-box;
+      overflow: hidden;
+      color: #333;
+      font-size: 14px;
+      line-height: 20px;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+    }
+    .tags {
+      margin-top: 4px;
+      display: flex;
+    }
+    .tag {
+      box-sizing: border-box;
+      height: 18px;
+      margin-right: 6px;
+      padding-right: 12px;
+      padding-left: 12px;
+      color: #f43f3d;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      background: rgba(244, 63, 61, 0.1);
+      border: 1px solid rgba(244, 63, 61, 0.6);
+      border-radius: 4px;
+    }
+    .star {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      align-self: flex-start;
+      justify-content: center;
+      padding: 4px 8px;
+      color: #FA5900;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      border: 1px solid #FA5900;
+      border-radius: 12px;
+    }
+  }
+  .expert_desc {
+    display: -webkit-box;
+    overflow: hidden;
+    color: #45494c;
+    font-size: 12px;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}

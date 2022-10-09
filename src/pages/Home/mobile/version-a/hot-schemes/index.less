@@ -1,0 +1,112 @@
+.wrapper {
+  margin-top: 6px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 34px;
+    padding: 0 16px;
+    .left {
+      color: #000028;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      color: #848494;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+
+      .arrow_icon {
+        margin-left: 4px;
+      }
+
+      .icon {
+        &:first-child {
+          margin-right: 12px;
+        }
+        &.disabled {
+          color: #eee;
+        }
+      }
+    }
+  }
+  .button_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4px;
+    padding-right: 16px;
+
+    .more_box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 40px;
+    }
+    .more_title {
+      color: #848494;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+    }
+    :global(.ant-select-selector) {
+      padding: 0px;
+      border: none;
+      background-color: transparent;
+    }
+    :global(.ant-select-focused) {
+      border: none;
+    }
+    :global(.ant-select-arrow) {
+      right: 0px;
+    }
+    :global(.ant-select-selection-item) {
+      text-align: end;
+    }
+  }
+  .tabs {
+    width: 168px;
+
+    --adm-color-text: #848494;
+    :global(.adm-tabs-header) {
+      border-bottom: none;
+    }
+
+    :global(.adm-tabs-tab-wrapper) {
+      padding: 0px 0px;
+    }
+    :global(.adm-tabs-tab) {
+      padding: 4px 10px;
+    }
+    :global(.adm-tabs-tab-active) {
+      font-weight: 500;
+    }
+
+  }
+  .body {
+    position: relative;
+    margin-top: 6px;
+    // display: flex;
+    // align-items: center;
+    // padding: 10px 6px;
+    // background: linear-gradient(180deg, #EEE7FC 0%, rgba(238, 232, 252, 0.25) 100%);
+    // border-radius: 4px;
+    margin-bottom: 14px;
+    padding: 0 16px;
+    // border-radius: 12px;
+    // box-shadow: 0 0 8px rgba(57, 144, 106, 0.2);
+
+    .content {
+      margin: 0 -17px;
+    }
+  }
+  .scheme_wrap {
+    .content {
+      margin: 0 -17px;
+    }
+  }
+}

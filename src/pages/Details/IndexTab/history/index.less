@@ -1,0 +1,100 @@
+@import '~antd/es/style/themes/default.less';
+
+.modal {
+
+  // width: 500px;
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  :global(.ant-modal) {
+    width: 680px !important;
+
+    @media screen and (max-width: @screen-sm) {
+      width: 98vw !important;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+    }
+
+  }
+
+  :global(.ant-btn) {
+    height: 60px !important;
+    border-radius: 6px !important;
+  }
+
+  :global(.ant-modal-content) {
+    border-radius: 12px !important;
+  }
+}
+
+.container {
+  // padding: 50px;
+  width: 680px;
+
+  @media screen and (max-width: @screen-sm) {
+    // width: 98vw !important;
+    width: 100% !important;
+    max-height: 70vh;
+    overflow: hidden;
+  }
+
+  .main {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 48px;
+
+    :global(.ant-input-affix-wrapper) {
+      padding: 16.5px 11px;
+      border-radius: 12px;
+    }
+  }
+
+  .footer {
+    margin-top: 40px;
+    color: #999;
+    ;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  // height: 44px;
+  // line-height: 44px;
+  margin-bottom: 12px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 44px;
+  margin-right: 16px;
+  vertical-align: top;
+}
+
+.title {
+  position: relative;
+  top: 2px;
+  color: @primary-color;
+  font-weight: 800;
+  font-size: 36px;
+  // font-family: 'Barlow';
+  font-style: italic;
+}
+
+.desc {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+
+  .email {
+    color: @black;
+  }
+}

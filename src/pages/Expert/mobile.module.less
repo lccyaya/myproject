@@ -1,0 +1,93 @@
+.main {
+  padding: 16px;
+  .icon {
+    transform: rotate(90deg);
+    margin-left: 4px;
+  }
+  .title {
+    padding: 10px 17px;
+  }
+  section {
+    margin-bottom: 24px;
+  }
+  .section {
+    margin-bottom: 14px;
+    box-shadow: 0 0 8px rgba(57, 144, 106, 0.2);
+    border-radius: 12px;
+  }
+  
+  .trigger_name {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+  }
+  .export_wrap {
+    background: linear-gradient(180deg, #DEF5EA 0%, #FFF 100%);
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 17px;
+    .football {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      border-radius: 12px;
+      z-index: 1;
+    }
+    .content {
+      min-height: 140px;
+    }
+    .base_tab {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  
+  .match_wrap {
+    background-image: url(../../assets/match_m_bg.png);
+    background-size: cover;
+    .title {
+      border-bottom: 1px solid #fff;
+    }
+    
+  }
+  .scheme_wrap {
+    .content {
+      margin: 0 -17px;
+    }
+  }
+ 
+}
+.overlayClassName {
+ :global {
+  .ant-dropdown-menu {
+    min-width: 71px;
+    background: #FFF;
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08), 0 16px 48px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    padding: 0 8px;
+  }
+  .ant-dropdown-menu-item {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    text-align: center;
+    white-space: nowrap;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background: none;
+    }
+    &.ant-dropdown-menu-item-selected {
+      background: none;
+      color: #FA5900;
+    }
+  }
+ }
+}

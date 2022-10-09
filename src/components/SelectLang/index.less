@@ -1,0 +1,26 @@
+@import '~antd/es/style/themes/default.less';
+
+.wrapper {
+  font-size: 18px;
+  color: #999;
+
+  .title {
+    @media screen and (max-width: @screen-xs) {
+      max-width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    :hover {
+      color: @primary-color;
+    }
+
+    margin-right: 5px;
+  }
+  .icon{
+    font-size: 12px;
+    :hover{
+      color: @primary-color;
+    }
+  }
+
+}

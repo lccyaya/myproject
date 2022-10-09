@@ -1,0 +1,58 @@
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  background: white;
+  line-height: 0;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  z-index: 1;
+
+  .refresh {
+    -webkit-animation: myRotate 1s linear infinite;
+    animation: myRotate 1s linear infinite;
+  }
+}
+
+@-webkit-keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}

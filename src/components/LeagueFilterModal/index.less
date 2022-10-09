@@ -1,0 +1,387 @@
+@import '~antd/es/style/themes/default.less';
+
+.leagueFilterModal {
+  :global {
+    .ant-modal-body {
+      padding: 0;
+    }
+    .ant-modal-close-x {
+      position: absolute;
+      top: 18px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 49px;
+      font-size: 24px;
+    }
+  }
+
+  .container {
+    padding: 24px 32px;
+
+    .title {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      color: @primary-color;
+      font-size: 24px;
+      font-family: 'PingFang SC Bold';
+      line-height: 32px;
+      text-align: center;
+
+      .skip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #333;
+        font-size: 16px;
+        font-family: PingFang SC Bold;
+        line-height: 22px;
+        cursor: pointer;
+      }
+
+      .skip:hover {
+        color: @primary-color;
+      }
+    }
+
+    .SearchOutlined {
+      width: 32px;
+      color: #ccc;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .SearchOutlined:hover {
+      color: @primary-color;
+    }
+
+    .search {
+      height: 40px;
+      font-size: 14px;
+      line-height: 40px;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      background: #fafafa;
+      border: none;
+      border-radius: 8px !important;
+    }
+
+    :global(.ant-input) {
+      font-size: 14px;
+      line-height: 24px;
+      background: #fafafa;
+    }
+
+    :global(.ant-input-group-addon) {
+      display: none;
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu {
+      :global {
+        .ant-tabs-nav {
+          width: 100%;
+          .ant-tabs-nav-wrap .ant-tabs-nav-list {
+            .ant-tabs-tab {
+              height: 36px;
+              margin-top: 0;
+              &.ant-tabs-tab-active {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      height: 350px;
+      margin-top: 16px;
+
+      .category {
+        width: 160px;
+        background: #fafafa;
+      }
+      .categoryContent {
+        flex: auto;
+      }
+
+      .list {
+        .floor {
+          padding-bottom: 14px;
+          .floorTitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            margin-bottom: 16px;
+            .floorTitleLine {
+              width: 48px;
+              height: 1px;
+              background-color: #999;
+            }
+            .floorTitleText {
+              margin: 0 16px;
+              font-weight: bold;
+              font-size: 24px;
+              font-style: italic;
+            }
+          }
+          .floorContent {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+
+        .logoCon {
+          position: relative;
+          width: 25%;
+          margin-bottom: 12px;
+          text-align: center;
+          cursor: pointer;
+
+          @media (max-width: @screen-xs) {
+            width: 33.33%;
+          }
+
+          .logo {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+          }
+
+          .check {
+            position: absolute;
+            top: 0;
+            left: calc(50% + 8px);
+          }
+
+          .name {
+            padding: 0 4px;
+            overflow: hidden;
+            color: #333;
+            font-size: 12px;
+            font-family: PingFang SC Normal;
+            line-height: 28px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+
+            @media (max-width: @screen-xs) {
+              margin-top: 6px;
+              line-height: 14px;
+            }
+          }
+
+          .name:hover {
+            overflow: visible;
+
+            .nameText {
+              background: rgb(255, 255, 255);
+              border: rgb(105, 105, 105) solid 1px;
+            }
+          }
+        }
+
+        .logoCon:hover {
+          opacity: 0.65;
+        }
+      }
+
+      .empty {
+        margin-top: 100px;
+      }
+
+      .cardContainer {
+        width: 33.33%;
+        height: 96px;
+        padding: 4px;
+
+        .card {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          background: #fafafa;
+          border-radius: 8px;
+
+          .plus {
+            color: @primary-color;
+            font-size: 40px;
+            line-height: 50px;
+          }
+
+          .followme {
+            color: #333;
+            font-size: 12px;
+            font-family: 'PingFang SC Medium';
+            line-height: 20px;
+          }
+
+          .logo {
+            width: 48px;
+            height: 48px;
+            margin-top: 20px;
+            object-fit: contain;
+          }
+
+          .intro {
+            text-align: left;
+
+            .text {
+              margin-top: 20px;
+              overflow: hidden;
+              color: #333;
+              font-size: 12px;
+              font-family: 'PingFang SC Medium';
+              line-height: 20px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              word-break: break-all;
+            }
+
+            .text:hover {
+              overflow: visible;
+
+              .textName {
+                background: #fff;
+                border: rgb(200, 200, 200) solid 1px;
+              }
+            }
+
+            .button {
+              height: 24px;
+              margin-top: 4px;
+              font-size: 12px;
+              font-family: 'PingFang SC Medium';
+              line-height: 20px;
+              border-radius: 8px;
+            }
+          }
+        }
+
+        .follow {
+          cursor: pointer;
+        }
+
+        .follow:hover {
+          opacity: 0.65;
+        }
+      }
+
+      @media (max-width: @screen-xs) {
+        .cardContainer {
+          width: 100%;
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 36px;
+      text-align: right;
+
+      .title {
+        font-size: 20px;
+      }
+
+      .top {
+        display: flex;
+        flex: auto;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 196px;
+
+        .selectedTip {
+          margin-right: 4px;
+          margin-left: auto;
+          color: #666;
+          font-size: 14px;
+        }
+      }
+
+      .button {
+        width: 125px;
+        height: 46px;
+        font-size: 16px;
+        font-family: 'PingFang SC Bold';
+        border-radius: 8px;
+      }
+
+      .close {
+        width: 120px;
+      }
+
+      .choose {
+        margin-left: 16px;
+      }
+      .back {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: @screen-xs) {
+      .footer {
+        flex-direction: column;
+        padding-bottom: 4px;
+        .top {
+          width: 100%;
+          margin-bottom: 8px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    :global {
+      .ant-modal-close-x {
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .container {
+      padding: 4px 8px;
+
+      .title {
+        font-size: 18px;
+      }
+
+      :global(.ant-menu-item) {
+        padding: 0 6px !important;
+      }
+
+      .footer {
+        margin-top: 12px;
+
+        .button {
+          height: 32px;
+          font-size: 12px;
+          border-radius: 8px;
+        }
+
+        .close {
+          width: 80px;
+        }
+
+        .choose {
+          width: 120px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

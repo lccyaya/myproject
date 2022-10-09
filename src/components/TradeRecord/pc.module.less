@@ -1,0 +1,65 @@
+.order {
+  .item {
+    padding: 8px 0 ;
+    border-bottom: 1px solid rgba(153,153,153,0.3000);
+    &:last-child {
+      border-bottom: none;
+    }
+
+    display: flex;
+    align-items: center;
+    .type {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 16px;
+      font-family: STYuanti-SC-Bold, STYuanti-SC;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin-right: 8px;
+      &.type_1 {
+        background-color: #FE8101;
+      }
+      &.type_2 {
+        background-color: #FA5900;
+      }
+      &.type_3 {
+        background-color: #3599FF;
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1; 
+      overflow: hidden;
+      .info_content {
+        width: 100%;
+        flex: 1;
+        overflow: hidden;
+      }
+      .title {
+        font-size: 14px;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .updated_at {
+        font-size: 12px;
+        margin-top: 4px;
+        color: #999;
+      }
+      .gold_coin {
+        font-size: 14px;
+        color: #191919;
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

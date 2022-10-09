@@ -1,0 +1,113 @@
+@import '~antd/es/style/themes/default.less';
+
+
+.container {
+  .header {
+    display: flex;
+    align-items: center;
+    .avatar {
+      height: 80px;
+      width: 80px;
+    }
+
+    .info {
+      margin-left: 16px;
+
+      .nicknameWrapper {
+        display: flex;
+        align-items: center;
+        .item {
+          font-style: bold;
+          font-size: 24px;
+          line-height: 32px;
+          color: #666;
+
+          &.divide {
+            font-size: 18px;
+            padding: 0 6px;
+            margin: 0;
+          }
+          &.type {
+            color: @primary-color;
+          }
+        }
+        .nickname {
+          max-width: 300px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+      }
+      .email {
+        color: #666;
+        font-size: 18px;
+        line-height: 36px;
+       
+      }
+    }
+  }
+
+  .divide {
+    margin: 40px 0;
+  }
+
+  .body {
+    :global {
+      .ant-tabs-left {
+        >.ant-tabs-nav {
+          height: 320px;
+          .ant-tabs-ink-bar {
+            display: none;
+          }
+        }
+        .ant-tabs-content-holder {
+          border: none;
+          margin-left: 0;
+        }
+        .ant-tabs-tabpane {
+          padding-left: 12px !important; 
+        }
+      }
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      .icon {
+        font-size: 20px;
+     
+      }
+
+      .tabName {
+        font-size: 18px;
+        
+      }
+    }
+
+    .tabContent {
+      margin-left: 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 24px 40px;
+    }
+    .record_header {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      justify-content: space-between;
+      margin-bottom: 17px;
+      .right {
+        width: 20px;
+      }
+      .icon {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.warn_tip {
+  margin: 33px 0 0 100px;
+}

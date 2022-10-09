@@ -1,0 +1,187 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  margin-top: 12px;
+  @media (max-width: @screen-xs) {
+    margin-top: 0;
+  }
+
+  .header {
+    position: relative;
+    align-items: center;
+    height: 52px;
+    margin-left: 40px;
+    //justify-content: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+
+    @media (max-width: @screen-xs) {
+      height: 40px;
+      margin-left: 0;
+      padding-bottom: 4px;
+      padding-left: 12px;
+    }
+
+    .SearchOutlined {
+      width: 32px;
+      color: #ccc;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .SearchOutlined:hover {
+      color: @primary-color;
+    }
+
+    .searchWrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .search {
+      height: 40px;
+      font-size: 14px;
+      line-height: 40px;
+      @media (max-width: @screen-xs) {
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+
+    :global {
+      .ant-input-wrapper {
+        height: 100%;
+        .ant-input-affix-wrapper {
+          height: 100%;
+          background: #fafafa;
+          border: none;
+          border-radius: 8px !important;
+        }
+      }
+    }
+    //
+    //:global(.ant-input-affix-wrapper) {
+    //  border: none;
+    //  background: #FAFAFA;
+    //  border-radius: 8px !important;
+    //}
+
+    :global(.ant-input) {
+      font-size: 14px;
+      line-height: 24px;
+      background: #fafafa;
+    }
+
+    :global(.ant-input-group-addon) {
+      display: none;
+    }
+
+    .switchButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      margin-right: 12px;
+      margin-left: auto;
+      padding: 0 6px;
+      color: #454545;
+      font-weight: bold;
+      //width: 113px;
+      font-size: 14px;
+      font-family: 'PingFang SC Normal';
+      line-height: 40px;
+      background: #ffeba5;
+      border-radius: 24px;
+      .icon {
+        margin-top: 3px;
+        margin-right: 4px;
+      }
+    }
+
+    .switchButton:hover {
+      opacity: 0.7;
+    }
+
+    .filterIconContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //width: 24px;
+      height: 24px;
+      //margin-top: 4px;
+      margin-right: 12px;
+      border-left: none;
+      .menuIcon {
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .menuIcon:hover {
+        opacity: 0.4;
+      }
+    }
+
+    .datePicker {
+      height: 24px;
+
+      @media (max-width: @screen-xs) {
+        display: none;
+      }
+    }
+  }
+
+  .scrollContainer {
+    width: 100%;
+    height: calc(100vh - 120px);
+    height: calc(var(--vh, 1vh) * 100 - 120px);
+    .listContainer {
+      margin-top: 24px;
+      margin-bottom: 12px;
+      margin-left: 40px;
+
+      .dateContainer {
+        color: #333;
+        font-weight: 500;
+        font-family: Barlow;
+        font-style: normal;
+        line-height: 32px;
+
+        .date {
+          font-size: 22px;
+        }
+
+        .month {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .listContainer:nth-child(1) {
+      margin-top: 0;
+    }
+
+    .liveListContainer {
+      margin-top: 0;
+    }
+
+    @media (max-width: @screen-xs) {
+      .listContainer {
+        margin: 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .menu {
+    height: 24px;
+    margin: 16px 0;
+    font-size: 14px !important;
+    line-height: 24px;
+  }
+}
+
+.phone {
+  padding: 0;
+}

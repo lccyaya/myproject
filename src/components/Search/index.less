@@ -1,0 +1,164 @@
+@import '~antd/es/style/themes/default.less';
+
+.box {
+  width: 100%;
+  height: 100%;
+
+  .content {
+    height: 350px;
+    margin-top: 16px;
+
+    .list {
+      .logoCon {
+        position: relative;
+        width: 25%;
+        margin-bottom: 12px;
+        text-align: center;
+        cursor: pointer;
+
+        @media (max-width: @screen-xs) {
+          width: 33.33%;
+        }
+
+        .logo {
+          position: relative;
+          width: 48px;
+          height: 48px;
+          object-fit: contain;
+        }
+
+        .check {
+          position: absolute;
+          top: 0;
+          left: calc(50% + 8px);
+        }
+
+        .name {
+          color: #333;
+          font-size: 12px;
+          font-family: PingFang SC Normal;
+          line-height: 28px;
+
+          @media (max-width: @screen-xs) {
+            margin-top: 6px;
+            line-height: 14px;
+          }
+        }
+      }
+
+      .logoCon:hover {
+        opacity: 0.65;
+      }
+    }
+
+    .empty {
+      margin-top: 100px;
+    }
+
+    .cardContainer {
+      width: 33.33%;
+      height: 96px;
+      padding: 4px;
+
+      .card {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: #fafafa;
+        border-radius: 8px;
+
+        .plus {
+          color: @primary-color;
+          font-size: 40px;
+          line-height: 50px;
+        }
+
+        .followme {
+          color: #333;
+          font-size: 12px;
+          font-family: 'PingFang SC Medium';
+          line-height: 20px;
+        }
+
+        .logo {
+          width: 48px;
+          height: 48px;
+          margin-top: 20px;
+          object-fit: contain;
+        }
+
+        .intro {
+          text-align: left;
+
+          .text {
+            margin-top: 20px;
+            overflow: hidden;
+            color: #333;
+            font-size: 12px;
+            font-family: 'PingFang SC Medium';
+            line-height: 20px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+          }
+
+          .text:hover {
+            overflow: visible;
+
+            .textName {
+              background: #fff;
+              border: rgb(200, 200, 200) solid 1px;
+            }
+          }
+
+          .button {
+            height: 24px;
+            margin-top: 4px;
+            font-size: 12px;
+            font-family: 'PingFang SC Medium';
+            line-height: 20px;
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .follow {
+        cursor: pointer;
+      }
+
+      .follow:hover {
+        opacity: 0.65;
+      }
+    }
+
+    @media (max-width: @screen-xs) {
+      .cardContainer {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    text-align: right;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .button {
+      height: 48px;
+      font-size: 16px;
+      font-family: 'PingFang SC Bold';
+      border-radius: 8px;
+    }
+
+    .close {
+      width: 120px;
+    }
+
+    .choose {
+      width: 200px;
+      margin-left: 16px;
+    }
+  }
+}

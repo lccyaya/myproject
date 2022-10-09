@@ -1,0 +1,150 @@
+@import '~@/assets/theme.less';
+
+.stats {
+  :global(.ant-table-thead > tr > th) {
+    padding: 3px 15px;
+    background: #fafafa;
+    border: 2px #fff solid;
+
+    @media screen and (max-width: @screen-sm) {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    padding: 3px 15px;
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 22px;
+    background: #fafafa;
+    border: 2px #fff solid;
+    cursor: pointer;
+
+    @media screen and (max-width: @screen-sm) {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+
+  &.small {
+    :global(.ant-table) {
+      background: transparent;
+    }
+
+    :global(.ant-table-thead > tr > th) {
+      padding: 3px 5px;
+      color: #999;
+      font-size: 12px;
+      background: transparent;
+      border: none;
+
+      @media screen and (max-width: @screen-sm) {
+        padding: 3px 5px;
+        font-size: 12px !important;
+        text-align: left !important;
+      }
+    }
+
+    :global(.ant-table-tbody > tr > td) {
+      padding: 3px 5px;
+      color: @font-color-3;
+      color: #999;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'PingFang SC';
+      line-height: 22px;
+      background: transparent;
+      border: none;
+
+      @media screen and (max-width: @screen-sm) {
+        padding: 3px 5px;
+        font-size: 12px !important;
+        text-align: left !important;
+      }
+    }
+  }
+
+  .current {
+    td {
+      background: #f3f9f6 !important;
+    }
+  }
+
+  .showText {
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 22px;
+
+    @media screen and (max-width: @screen-sm) {
+      font-size: 12px;
+    }
+  }
+
+  .leagueRanking {
+    display: flex;
+    align-items: center;
+
+    .teamName {
+      @media screen and (max-width: @screen-sm) {
+        max-width: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+      }
+    }
+
+    &.smallRank {
+      color: #333;
+      font-size: 12px;
+
+      .teamName {
+        max-width: 70px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+      }
+
+      .position {
+        min-width: 15px;
+        color: #333;
+        font-size: 12px;
+
+        &.good {
+          color: #FA5900;
+        }
+      }
+    }
+
+    .position {
+      color: @font-color-0;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Barlow';
+      font-style: italic;
+      line-height: 26px;
+
+      @media screen and (max-width: @screen-sm) {
+        font-size: 12px;
+      }
+    }
+
+    .logo {
+      width: 22px;
+      height: 22px;
+      margin: auto 12px;
+      object-fit: contain;
+      vertical-align: middle;
+
+      @media screen and (max-width: @screen-sm) {
+        height: 16px;
+      }
+    }
+  }
+}

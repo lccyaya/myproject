@@ -1,0 +1,98 @@
+// @import '~antd/es/style/themes/default.less';
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.container {
+  height: 100vh;
+
+  .iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      height: 80px;
+      width: 80px;
+    }
+
+    .info {
+      margin-left: 16px;
+
+      .nicknameWrapper {
+        .item {
+          font-family: 'PingFang SC';
+          font-style: bold;
+          font-size: 24px;
+          line-height: 32px;
+          color: #666666;
+
+          &.nickname {}
+
+          &.divide {
+            font-size: 18px;
+            padding: 0 6px;
+          }
+
+          &.type {
+            color: @primary-color;
+          }
+        }
+
+        .nickname {
+          font-family: 'PingFang SC';
+          font-style: bold;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+      }
+
+      .email {
+        font-family: 'PingFang SC';
+        color: #666666;
+        font-size: 18px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .divide {
+    margin: 40px 0;
+  }
+
+  .body {
+    :global(.ant-tabs-ink-bar) {
+      display: none;
+    }
+
+    :global(.ant-tabs-content-holder) {
+      border: none;
+      margin-left: 0;
+    }
+
+    .tab {
+      .icon {
+        font-size: 20px;
+      }
+
+      .tabName {
+        font-size: 18px;
+      }
+    }
+
+    .tabContent {
+      margin-left: 100px;
+    }
+
+  }
+}

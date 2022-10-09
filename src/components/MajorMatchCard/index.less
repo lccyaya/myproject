@@ -1,0 +1,423 @@
+@import '../../assets/theme.less';
+
+.barContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  margin-top: 12px;
+  .bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    margin-top: 2px;
+    overflow: hidden;
+    border-radius: 4px;
+
+    .barH {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 0;
+      height: 100%;
+      background: @home-color;
+      transform: skew(-30deg);
+    }
+
+    .barH::before {
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 8px;
+      height: 8px;
+      background: @home-color;
+      content: '';
+    }
+
+    .barD {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      box-sizing: content-box;
+      width: 0;
+      height: 100%;
+      background: @draw-color;
+      border-right: 1px #fff solid;
+      border-left: 1px #fff solid;
+      transform: skew(-30deg);
+    }
+
+    .barA {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 0;
+      height: 100%;
+      background: @away-color;
+      transform: skew(-30deg);
+    }
+
+    .barA::before {
+      position: absolute;
+      top: 0;
+      right: -4px;
+      width: 8px;
+      height: 8px;
+      background: @away-color;
+      content: '';
+    }
+  }
+
+  .homePercent {
+    margin-right: 10px;
+    color: @home-color;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: Barlow;
+    font-style: normal;
+    line-height: 12px;
+  }
+
+  .opponentPercent {
+    margin-left: 10px;
+    color: @away-color;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: Barlow;
+    font-style: normal;
+    line-height: 12px;
+    text-align: right;
+  }
+
+  @media (max-width: @screen-xs) {
+    .homePercent {
+      text-align: center;
+    }
+
+    .opponentPercent {
+      text-align: center;
+    }
+  }
+}
+
+.tipsCard {
+  position: absolute;
+  top: 85px;
+  //width: 121%;
+  z-index: 2;
+  //left: 50%;
+  //transform: translateX(-50%);
+  padding: 0 12px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.21);
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 12px 0 8px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(141, 141, 141, 0.25);
+    .logo {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+    .name {
+      max-width: 52px;
+      margin-left: 5px;
+      overflow: hidden;
+      color: #333;
+      font-size: 12px;
+      line-height: 16px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .value {
+      margin-left: 10px;
+      color: #d80000;
+      font-weight: 500;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 15px;
+    }
+    .confidence {
+      margin-left: auto;
+    }
+    .rate {
+      display: flex;
+      margin-left: 7px;
+    }
+  }
+  .body {
+    padding-bottom: 12px;
+    .barChartTitle {
+      margin-top: 8px;
+      color: #666;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+    }
+    .barChartInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .info {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        &.home .num {
+          color: #FA5900;
+        }
+        &.away .num {
+          color: #f00;
+        }
+        span {
+          margin-left: 4px;
+          color: #6b6b6b;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 32%;
+  height: 210px;
+  padding: 12px 8px;
+  background: #fafafa;
+  border-radius: 16px;
+  cursor: pointer;
+
+  .cardContainer {
+    width: 100%;
+    height: 100%;
+
+    .headContainer {
+      width: 100%;
+      height: 28px;
+      border-bottom: 1px solid #ddd;
+
+      .icon {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .icon:hover {
+        :global(.hoverSVG) {
+          stroke: @primary-color;
+        }
+      }
+
+      .iconDisabled {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .matchLogo {
+        width: 16px;
+        height: 16px;
+      }
+
+      .match {
+        position: relative;
+        z-index: 9;
+        overflow: hidden;
+        color: #999;
+        font-size: 10px;
+        font-family: 'PingFang SC Normal';
+        line-height: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+      .match:hover {
+        overflow: visible;
+
+        .matchName {
+          background: rgb(255, 255, 255);
+          border: rgb(105, 105, 105) solid 1px;
+        }
+      }
+    }
+
+    .logoContainer {
+      height: 66px;
+      margin-top: 8px;
+
+      .dateContainer {
+        margin-top: 20px;
+        color: #000;
+        font-size: 10px;
+        font-family: 'PingFang SC Normal';
+        line-height: 14px;
+        opacity: 0.5;
+        mix-blend-mode: normal;
+
+        .dateText {
+          width: 100%;
+          text-align: center;
+        }
+
+        .score {
+          color: #6b6b6b;
+          font-weight: bold;
+          font-size: 12px;
+          font-family: Barlow;
+          font-style: normal;
+          line-height: 15px;
+          text-align: center;
+        }
+      }
+
+      .logoBox {
+        position: relative;
+        text-align: center;
+
+        .lightTip {
+          position: absolute;
+          top: -9px;
+          right: 6px;
+          width: 28px;
+          height: 28px;
+          &.away {
+            right: unset;
+            left: 6px;
+          }
+        }
+
+        .logo {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          margin: 8px 0;
+          object-fit: contain;
+        }
+
+        .logoText {
+          overflow: hidden;
+          color: #333;
+          font-size: 12px;
+          font-family: 'PingFang SC Normal';
+          line-height: 16px;
+          white-space: nowrap;
+          text-align: center;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+
+        .logoText:hover {
+          position: relative;
+          z-index: 3;
+          overflow: visible;
+
+          .logoInnerText {
+            background: #fafafa;
+            border: rgb(200, 200, 200) solid 1px;
+          }
+        }
+      }
+    }
+
+    .videoContainer {
+      justify-content: center;
+      height: 14px;
+
+      .videoIcon {
+        width: 12px;
+        height: 12px;
+        margin: 1px 0;
+      }
+
+      .videoText {
+        padding-left: 4px;
+        color: #ea8384;
+        font-size: 12px;
+        font-family: 'PingFang SC normal';
+        line-height: 16px;
+      }
+
+      .playback {
+        color: #a30b0b;
+      }
+
+      .hasVideo {
+        color: #d80000;
+      }
+
+      .noVideo {
+        color: #ea8384;
+      }
+    }
+
+    .cardContainer {
+      margin: 12px -2px 0 -2px;
+
+      .handicap {
+        height: 30px;
+        padding: 2px;
+        font-weight: bold;
+        font-size: 12px;
+        font-family: Barlow;
+        font-style: normal;
+        line-height: 30px;
+        text-align: center;
+
+        .home {
+          color: @home-color;
+          background: #fff;
+          border-radius: 4px;
+        }
+
+        .draw {
+          color: @draw-color;
+          background: #fff;
+          border-radius: 4px;
+        }
+
+        .away {
+          color: @away-color;
+          background: #fff;
+          border-radius: 4px;
+        }
+
+        .voted {
+          background: #d3e5dd;
+          cursor: no-drop;
+        }
+
+        .notvoted {
+          background: #f3f3f3;
+          cursor: no-drop;
+        }
+
+        .abled {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .card {
+    width: 100%;
+  }
+}
+
+.card {
+  margin-left: 2%;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.card:hover {
+  background: #fafafa;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}

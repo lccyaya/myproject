@@ -1,0 +1,36 @@
+@import '~@/assets/theme.less';
+
+.container {
+  .formatWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .formatStr {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0 8px 0;
+      .formatInfo {
+        display: flex;
+        color: @font-color-6;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: 'PingFang SC';
+        line-height: 22px;
+
+        .name {
+          margin: 0 16px 0 0;
+        }
+
+        &.rightInfo {
+          flex-direction: row-reverse;
+
+          .name {
+            margin: 0 0 0 16px;
+          }
+        }
+      }
+    }
+
+  }
+}

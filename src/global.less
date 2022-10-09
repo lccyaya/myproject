@@ -1,0 +1,132 @@
+@import '~antd/es/style/themes/default.less';
+
+@font-face {
+  font-family: Barlow;
+  src: url('./assets/barlow.ttf');
+}
+@font-face {
+  font-family: Barlow-Bold;
+  src: url('./assets/barlow-Bold.ttf');
+}
+
+@font-face {
+  font-family: Barlow-Medium;
+  src: url('./assets/barlow-Medium.ttf');
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  //user-select: none;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: #fff;
+}
+
+.ant-layout-header {
+  z-index: 20 !important;
+}
+.ant-layout-header, #global-open-app-header {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s .5s;
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility 0s .2s;
+  }
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容 IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+// 隐藏友盟统计 icon
+[id^="cnzz_stat_icon"] {
+  display: none;
+}
+
+@media screen and (max-width: @screen-sm) {
+  body > div > .ant-layout {
+    display: none;
+  }
+  input[type="text"],input[type="password"] {
+    font-size: 14PX !important;
+  }
+  .ant-input-suffix {
+    font-size: 12PX;
+  }
+  .ant-form-item-explain-error {
+    font-size: 12PX !important;
+  }
+}
+
+:root:root {
+  --adm-color-primary: #FA5900;
+}
+
+.adm-toast-mask {
+  .adm-toast-wrap {
+    .adm-toast-main-text {
+      min-width: 240px;
+      background: #fff;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1600);
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: @primary-color;
+      padding: 16px 0;
+    }
+  }
+  
+}
+
+.h-full {
+  height: 100%;
+}

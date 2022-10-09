@@ -1,0 +1,154 @@
+.scheme_block {
+  margin-bottom: 14px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .top {
+    position: relative;
+    display: flex;
+    height: 150px;
+    .pa0 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 30px;
+      padding: 0 12px;
+      background: #f3f3f3;
+      .play {
+        width: 100px;
+        color: #333;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      .competition_name,
+      .match_time {
+        color: #999;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .match_time {
+        width: 100px;
+        text-align: right;
+      }
+    }
+    .pa3 {
+      position: absolute;
+      top: 40px;
+      right: 12px;
+      width: 46px;
+      height: 46px;
+    }
+    .vs {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      margin-top: 35px;
+    }
+
+    .score {
+      color: #333;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .status {
+      margin-top: 15px;
+      color: #999;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .team {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+    }
+    .team_logo {
+      width: 48px;
+      height: 48px;
+      margin-top: 51px;
+      margin-bottom: 8px;
+      object-fit: contain;
+    }
+    .team_name {
+      width: 80%;
+      overflow: hidden;
+      color: #333;
+      font-size: 16px;
+      line-height: 23px;
+      white-space: nowrap;
+      text-align: center;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+  }
+  .bottom {
+    display: flex;
+  }
+  .bottom_item {
+    position: relative;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    color: #333;
+    background: #fff8f0;
+  }
+  .bottom_item_mid {
+    flex: 1;
+  }
+  .bottom_item_title {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .bottom_item_score {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .bottom_item_active {
+    color: #fff;
+    background: #d28601;
+  }
+  .push {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    background-color: #d61e25;
+    border-radius: 0 4px 4px 0;
+  }
+  .hit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 21px;
+    height: 24px;
+  }
+}

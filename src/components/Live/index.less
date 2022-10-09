@@ -1,0 +1,139 @@
+.liveContainer {
+  width: 100%;
+  background: white;
+
+  .channel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      color: #46494c;
+      font-weight: bold;
+      font-size: 24px;
+      font-family: Barlow;
+      font-style: italic;
+      line-height: 32px;
+    }
+
+    .change {
+      border-radius: 32px;
+    }
+  }
+
+  .video {
+    margin-top: 16px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+
+    .videoHead {
+      width: 100%;
+      height: 92px;
+      background: #fafafa;
+
+      .competitionCon {
+        height: 44px;
+        padding: 12px;
+
+        .competition {
+          color: #999;
+          font-size: 12px;
+          font-family: 'PingFang SC Normal';
+          line-height: 20px;
+        }
+      }
+
+      .infoCon {
+        height: 32px;
+        margin-bottom: 16px;
+        line-height: 32px;
+
+        .homeTeam {
+          padding-left: 12px;
+          overflow: hidden;
+          color: #333;
+          font-size: 12px;
+          font-family: 'PingFang SC Normal';
+          line-height: 32px;
+          white-space: nowrap;
+          text-align: right;
+          text-align: center;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+
+        // .homeTeam:hover {
+        //   position: relative;
+        //   z-index: 3;
+        //   overflow: visible;
+
+        //   .homeTeamText {
+        //     background: #fafafa;
+        //     border: rgb(200, 200, 200) solid 1px;
+        //   }
+        // }
+
+        .logoCon {
+          text-align: center;
+
+          .logo {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+          }
+        }
+
+        .time {
+          color: #999;
+          font-size: 12px;
+          font-family: 'PingFang SC Normal';
+          line-height: 16px;
+          text-align: center;
+        }
+
+        .awayTeam {
+          padding-right: 12px;
+          overflow: hidden;
+          color: #333;
+          font-size: 12px;
+          font-family: 'PingFang SC Normal';
+          line-height: 32px;
+          white-space: nowrap;
+          text-align: center;
+          text-overflow: ellipsis;
+          word-break: break-all;
+        }
+
+        // .awayTeam:hover {
+        //   position: relative;
+        //   z-index: 3;
+        //   overflow: visible;
+
+        //   .awayTeamText {
+        //     background: #fafafa;
+        //     border: rgb(200, 200, 200) solid 1px;
+        //     padding: 2px 8px;
+        //     border-radius: 4px;
+        //   }
+        // }
+      }
+    }
+
+    .iframeContainer {
+      position: relative;
+      width: 100%;
+      height: 0%;
+      padding-bottom: 50%;
+
+      .iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  // height: 100%;
+}

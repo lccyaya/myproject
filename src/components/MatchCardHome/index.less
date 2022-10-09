@@ -1,0 +1,504 @@
+@import '../../assets/theme.less';
+
+.card {
+  width: 100%;
+  height: 160px;
+  margin-top: 16px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 16px;
+  &.smallView {
+    height: 110px;
+    margin-top: 0;
+    .cardContainer {
+      .line,
+      .end {
+        margin-top: 4px !important;
+      }
+      .logoContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2px;
+        .left {
+          margin-top: 0;
+        }
+        .logo {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+        .name {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &.whiteBg {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    &:hover {
+      background-color: #fff;
+      box-shadow: none;
+    }
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      vertical-align: top;
+    }
+
+    .name {
+      overflow: hidden;
+      color: #333;
+      font-size: 18px;
+      font-family: 'PingFang SC Bold';
+      line-height: 32px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      .score {
+        display: inline-block;
+        padding: 4px 8px;
+        color: #333;
+        font-family: 'Barlow Medium';
+        line-height: 14px;
+        background: #eee;
+        border-radius: 4px;
+      }
+    }
+
+    .score {
+      color: @primary-color;
+      font-weight: 800;
+      font-size: 20px;
+      font-family: Barlow;
+      font-style: normal;
+      line-height: 32px;
+      text-align: left;
+    }
+
+    .default {
+      color: #999;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 32px;
+      text-align: left;
+    }
+
+    @media (max-width: @screen-xs) {
+      .logo {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .name {
+        height: 24px;
+        padding-left: 4px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .score {
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .going {
+      color: #FA5900;
+    }
+
+    .win {
+      color: #333;
+    }
+
+    .lose {
+      color: #999;
+    }
+
+    .empty {
+      color: @draw-color;
+    }
+
+    .header {
+      height: 28px;
+      // border-bottom: 1px solid #ddd;
+
+      .iconContainer {
+        text-align: right;
+
+        .icon {
+          color: #fff;
+          font-size: 16px;
+          vertical-align: top;
+        }
+
+        .icon:hover {
+          :global(.hoverSVG) {
+            stroke: @primary-color;
+          }
+        }
+
+        .iconDisabled {
+          color: #fff;
+          font-size: 16px;
+          vertical-align: top;
+          // pointer-events: none;
+        }
+      }
+
+      .time {
+        color: #999;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+
+        @media (max-width: @screen-xs) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .competitionName {
+        display: inline-block;
+        width: 150px;
+        margin-left: 10px;
+        overflow: hidden;
+        color: #999;
+        font-size: 14px;
+        font-family: 'PingFang SC Normal';
+        line-height: 22px;
+        white-space: nowrap;
+        text-align: left;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        word-break: break-all;
+      }
+
+      .minutes {
+        color: #999;
+        font-size: 14px;
+        font-family: 'PingFang SC Normal';
+      }
+
+      .video {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: @screen-xs) {
+          justify-content: left;
+        }
+
+        .videoIcon {
+          width: 12px;
+          height: 12px;
+          margin: 3px 0;
+        }
+
+        .videoText {
+          padding-left: 4px;
+          font-size: 12px;
+          font-family: 'PingFang SC normal';
+          //color: #EA8384;
+
+          @media (max-width: @screen-xs) {
+            white-space: nowrap;
+          }
+        }
+
+        &.playback {
+          color: #a30b0b;
+        }
+
+        &.hasVideo {
+          color: #d80000;
+        }
+
+        &.disabled {
+          opacity: 0.4;
+        }
+
+        //.noVideo {
+        //  color: #EA8384;
+        //}
+      }
+
+      .text {
+        color: #999;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: 'Barlow Medium';
+        line-height: 22px;
+        text-align: right;
+      }
+
+      .last {
+        text-align: right;
+      }
+
+      @media (max-width: @screen-xs) {
+        .competitionName {
+          font-size: 12px;
+        }
+
+        .text {
+          padding-right: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .logoContent {
+      margin-top: 12px;
+      border-right: 1px solid #ddd;
+
+      .left {
+        height: 32px;
+        margin-top: 16px;
+        line-height: 32px;
+      }
+
+      @media (max-width: @screen-xs) {
+        .left {
+          height: 28px;
+          margin-top: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .line {
+      height: 24px;
+      margin-top: 12px;
+      font-family: 'Barlow SemiBold';
+
+      &.gray {
+        .trd,
+        .scd {
+          .draw {
+            color: #999;
+          }
+        }
+      }
+
+      .fst {
+        // display: flex;
+        // justify-content: center;
+        color: @home-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        // text-align: center;
+        text-align: right;
+
+        // .intro {
+        // width: 18px;
+        //   text-align: right;
+        // }
+
+        .number {
+          // width: 34px;
+          text-align: right;
+        }
+
+        .away {
+          color: @away-color;
+        }
+
+        .draw {
+          color: @draw-color;
+        }
+      }
+
+      .scd {
+        // display: flex;
+        // justify-content: center;
+        color: @draw-color;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: 'Barlow SemiBold';
+        line-height: 24px;
+        // text-align: center;
+        text-align: right;
+
+        // .intro {
+        // width: 18px;
+        //   color: @home-color;
+        //   text-align: right;
+        // }
+
+        .diff {
+          // width: 50px;
+          color: #999;
+          text-align: right;
+          opacity: 0.5;
+        }
+
+        .number {
+          // width: 34px;
+          color: @home-color;
+          text-align: right;
+        }
+
+        .away {
+          color: @away-color;
+        }
+
+        .draw {
+          color: @draw-color;
+        }
+
+        .draw2 {
+          color: rgb(243, 154, 53);
+        }
+      }
+
+      .trd {
+        // display: flex;
+        // justify-content: flex-end;
+        font-weight: 600;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 24px;
+        text-align: right;
+
+        // .intro {
+        //   color: @home-color;
+        // }
+
+        .number {
+          color: @home-color;
+          text-align: right;
+        }
+
+        .away {
+          color: @away-color;
+        }
+
+        .draw {
+          color: @draw-color;
+        }
+
+        .draw2 {
+          color: rgb(243, 154, 53);
+        }
+      }
+    }
+
+    .end {
+      height: 24px;
+      margin-top: 12px;
+      font-family: 'Barlow Medium';
+
+      .fst {
+        // display: flex;
+        // justify-content: center;
+        color: @draw-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        // text-align: center;
+        text-align: right;
+
+        // .intro {
+        // width: 12px;
+        // }
+
+        .number {
+          // width: 40px;
+          text-align: right;
+        }
+
+        .away {
+          color: @away-color;
+        }
+      }
+
+      .scd {
+        // display: flex;
+        // justify-content: center;
+        color: @away-color;
+        // color: @draw-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        // text-align: center;
+        text-align: right;
+
+        // .intro {
+        // width: 12px;
+        // }
+
+        .diff {
+          // width: 50px;
+          color: #999;
+          text-align: right;
+          opacity: 0.5;
+        }
+
+        .number {
+          // width: 40px;
+          text-align: right;
+        }
+      }
+
+      .trd {
+        // display: flex;
+        // justify-content: flex-end;
+        color: @away-color;
+        // color: @draw-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        // text-align: center;
+        text-align: right;
+
+        // .intro {
+        // width: 12px;
+        // }
+
+        .diff {
+          // width: 40px;
+          color: #999;
+          text-align: right;
+          opacity: 0.5;
+        }
+
+        .number {
+          // width: 40px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .rightIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .rightIcon {
+      color: #999;
+      font-size: 18px;
+    }
+  }
+}
+
+.card:hover {
+  background: #fafafa;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: @screen-xs) {
+  .card {
+    padding: 6px;
+  }
+}

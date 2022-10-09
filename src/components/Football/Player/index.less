@@ -1,0 +1,64 @@
+.container {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  &.home {
+    transform: translate(-50%, 50%);
+  }
+
+  &.away {
+    transform: translate(50%, -50%);
+  }
+
+  .info {
+    overflow: hidden;
+    color: #fff;
+    font-size: 10px;
+    font-family: 'PingFang SC Bold';
+    line-height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+
+    .number {
+      margin-right: 4px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    &.home {
+      transform: translate(-50%, 50%);
+    }
+
+    &.away {
+      transform: translate(50%, -50%);
+    }
+
+    .avatar{
+      height: 30px;
+      width: 30px;
+    }
+
+    .info {
+      overflow: hidden;
+      color: #fff;
+      font-size: 15px;
+      font-family: 'PingFang SC Bold';
+      line-height: 20px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+
+      .number {
+        margin-right: 6px;
+      }
+    }
+  }
+}

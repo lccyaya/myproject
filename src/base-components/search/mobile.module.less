@@ -1,0 +1,47 @@
+@import '~antd/es/style/themes/default.less';
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  font-size: 14px;
+  line-height: 32px;
+  :global{
+    .ant-input-group{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .ant-input{
+      border: none !important;
+      &::selection{
+        border: none !important;
+        outline: none !important;
+      }
+    }
+  }
+  .input{
+    height: 32px;
+    padding: 0 10px 0 30px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.SearchOutlined {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  font-size: 22px;
+  color: #ccc;
+  width: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.SearchOutlined:hover {
+  color: @primary-color;
+}

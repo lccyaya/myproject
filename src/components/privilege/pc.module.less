@@ -1,0 +1,80 @@
+.modal_content {
+  background: url('../../assets/new_user_bg.png');
+  background-size: 100% 100%;
+  width: 256px;
+  height: 319px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  position: relative;
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .desc {
+    .welfare {
+      font-weight: bold;
+      color: #D61E25;
+      font-size: 22px;
+      text-align: center;
+      line-height: 56px;
+      height: 56px;
+      span {
+        line-height: 56px;
+        font-size: 56px;
+        height: 56px;
+        font-family: barlow-bold, barlow;
+      }
+    }
+    .welfare_desc {
+      font-size: 16px;
+      font-weight: 500;
+      color: #D61E25;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      .value {
+        margin: 0 6px;
+      }
+      .line {
+        width: 22px;
+        height: 1px;
+        background: #D61E25;
+      }
+    }
+    
+  }
+  .button {
+    font-size: 20px;
+    font-weight: 600;
+    color: #D61E25;
+    background: url(../../assets/btn_bg.png);
+    width: 157px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin-top: 45px;
+    cursor: pointer;
+  }
+   .condition{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    margin-top: 10px;
+   }
+   .close {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+   }
+}

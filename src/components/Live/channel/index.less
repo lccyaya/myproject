@@ -1,0 +1,69 @@
+@import '~antd/es/style/themes/default.less';
+
+.modal {
+
+  // width: 500px;
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  :global(.ant-modal) {
+    width: 500px !important;
+  }
+
+  :global(.ant-btn) {
+    height: 40px !important;
+    border-radius: 6px !important;
+  }
+
+  :global(.ant-modal-content) {
+    border-radius: 12px !important;
+  }
+
+  :global(.ant-btn-primary) {
+    color: white;
+    background: #FA5900;
+  }
+
+  :global(.ant-btn-default) {
+    color: #333;
+    background: #fafafa;
+  }
+}
+
+.container {
+  padding: 24px;
+
+  .title {
+    margin-bottom: 24px;
+    color: #FA5900;
+    font-size: 24px;
+    font-family: 'PingFang SC Bold';
+    line-height: 32px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .handler {
+      font-size: 16px;
+      font-family: 'PingFang SC Bold';
+      border: none;
+
+      &.top {
+        margin-bottom: 24px;
+      }
+    }
+
+    .cancel {
+      margin-top: 8px;
+      color: #999;
+      font-size: 16px;
+      font-family: 'PingFang SC Bold';
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

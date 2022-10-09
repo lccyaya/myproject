@@ -1,0 +1,78 @@
+.coupon {
+  width: 100%;
+  .item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #FFD6A6;
+    border-radius: 4px;
+    background: #fff;
+    &.disabled {
+      opacity: 0.5;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .coupon_bg {
+      background: url(../../assets/coupon_bg.png);
+      background-size: 100% 100%;
+      font-size: 14px;
+      font-weight: 500;
+      color: #8F5B00;
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .gold_coin {
+        display: flex;
+        align-items: center;
+        .gold_coin_val {
+          font-family: Barlow-Bold, Barlow;
+          font-weight: bold;
+          color: #8F5B00;
+          font-size: 30px;
+          margin-right: 4px;
+          line-height: 36px;
+        }
+      }
+      .condition {
+        font-size: 12px;
+        color: #8F5B00;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        width: 100%;
+        padding: 0 5px;
+        text-align: center;
+      }
+    }
+    .info {
+      padding: 9px 12px 9px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      overflow: hidden;
+      .info_content {
+        width: 100%;
+      }
+      .name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #191919;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+
+      }
+      .valid_time {
+        margin-top: 2px;
+        font-size: 13px;
+        color: #45494C;
+      }
+    }
+  }
+}

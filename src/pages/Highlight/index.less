@@ -1,0 +1,380 @@
+.pc {
+  .blockTitle {
+    .left {
+      font-size: 24px;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.blockTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: #46494C;
+    line-height: 22px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    .item {
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(102, 102, 102, .75);
+      line-height: 17px;
+      &.active {
+        color: #FA5900;
+      }
+    }
+    .line {
+      width: 1px;
+      height: 15px;
+      background: #E2E2E2;
+      border-radius: 1px;
+      margin: 0 8px;
+    }
+  }
+}
+
+.pc {
+  .card {
+    cursor: pointer;
+    &.large {
+      width: 50%;
+      height: 329px;
+      .cardWrapper {
+        .title {
+          padding: 12px !important;
+          font-size: 18px !important;
+        }
+      }
+    }
+    .cardWrapper {
+      position: relative;
+      border-radius: 3px !important;
+      height: 100%;
+      .thumb {
+        padding-top: 0;
+        height: 100%;
+      }
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(56, 56, 56, 0.96) 100%);
+        color: #fff;
+        padding: 8px;
+        height: auto;
+        line-height: 16px;
+      }
+    }
+  }
+}
+.card {
+  padding-bottom: 4px;
+  &.large {
+    padding-bottom: 8px;
+    .cardWrapper {
+      background: #FFF;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .05);
+      border-radius: 3px;
+      .thumb {
+        .duration {
+          border-radius: 3px;
+          height: 28px;
+          padding: 0 6px;
+          .icon {
+            width: 14px;
+            height: 14px;
+          }
+          .text {
+            font-size: 14px;
+            margin-left: 3px;
+          }
+        }
+      }
+      .title {
+        padding: 8px 16px;
+        font-size: 14px;
+        line-height: 20px;
+        height: auto;
+      }
+      .playIcon {
+        width: 50px;
+        height: 50px;
+        .icon {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .cardWrapper {
+    background: #FFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    border-radius: 6px;
+    overflow: hidden;
+    .thumb {
+      padding-top: 56.2%;
+      position: relative;
+      .img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .duration {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 20px;
+        background: rgba(0, 0, 0, .64);
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        padding: 0 4px;
+        .icon {
+          background: url('../../assets/icon/play.svg') no-repeat 0 0;
+          background-size: 100% 100%;
+          width: 10px;
+          height: 10px;
+        }
+        .text {
+          font-size: 12px;
+          font-weight: 500;
+          color: #FFF;
+          line-height: 1;
+          margin-left: 2px;
+        }
+      }
+    }
+    .title {
+      padding: 6px;
+      font-size: 12px;
+      color: #666;
+      line-height: 16px;
+      height: 44px;
+
+      .titleWrapper {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .playIcon {
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, .5);
+      border: 1px solid rgba(0, 0, 0, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      .icon {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.wrapper {
+  &.pc {
+    padding-top: 24px;
+  }
+  .recommend {
+    padding: 0 16px;
+    &.pc {
+      padding: 0 12px 12px 12px;
+      background: #FFF;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      .card {
+        &:hover {
+          .playIcon {
+            opacity: 1;
+          }
+        }
+        .thumb {
+          .duration {
+            display: none !important;
+          }
+        }
+      }
+      .body {
+        display: flex;
+        align-items: stretch;
+        .list {
+          margin-left: 9px;
+          flex: auto;
+          grid-column-gap: 10px;
+          grid-row-gap: 9px;
+          margin-top: 0;
+        }
+      }
+    }
+    .header {
+      padding: 16px 0 12px 0;
+    }
+    .body {
+      min-height: 200px;
+      .list {
+        margin-top: 4px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 7px;
+        grid-row-gap: 8px;
+        //.item {
+        //
+        //}
+      }
+    }
+  }
+
+  .all {
+    &.pc {
+      margin-top: 24px;
+      padding: 0 12px 12px 12px;
+      background: #FFF;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      .header {
+        top: 48px;
+        height: 60px;
+        .blockTitle {
+          padding: 0;
+        }
+        .leagues {
+          margin-left: 36px;
+          padding: 0;
+          .left {
+            .league {
+              padding: 0 12px;
+              font-style: normal;
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      .body {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-column-gap: 13px;
+        grid-row-gap: 12px;
+        padding: 0;
+        .card {
+          .cardWrapper {
+            box-shadow: none;
+            .thumb {
+              height: 160px;
+            }
+            .title {
+              height: 36px;
+              background: #FAFAFA;
+              border-radius: 0 0 6px 6px;
+              position: relative;
+              .titleWrapper {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #666;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header {
+      background-color: #fff;
+      position: sticky;
+      top: 92px;
+      padding-top: 13px;
+      box-sizing: border-box;
+      height: 84px;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      .blockTitle {
+        padding: 0 16px;
+      }
+      .leagues {
+        margin-top: auto;
+        padding: 0 12px 0 16px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        color: #666;
+        overflow: hidden;
+        .left {
+          display: flex;
+          flex: auto;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .league {
+            cursor: pointer;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #efefef;
+            margin-right: 8px;
+            padding: 0 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            line-height: 1;
+            white-space: nowrap;
+            &.active {
+              background-color: #FA5900;
+              color: #fff;
+            }
+          }
+        }
+        .right {
+          padding-left: 10px;
+          flex-shrink: 0;
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          .icon {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .body {
+      padding: 0 16px 20px 16px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 7px;
+      grid-row-gap: 8px;
+    }
+  }
+}
+
+
+.bottomLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}

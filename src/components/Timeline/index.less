@@ -1,0 +1,116 @@
+@import '~antd/es/style/themes/default.less';
+
+.container {
+  width: 100%;
+  height: 94px;
+  padding: 0 12px;
+  @media (max-width: @screen-xs) {
+    padding: 0;
+  }
+
+  .timeline {
+    position: relative;
+    width: 100%;
+    height: 70px;
+
+    .home {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    .opponent {
+      position: absolute;
+      top: 54px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    .text {
+      color: #ddd;
+      font-weight: 600;
+      font-size: 10px;
+      font-family: Barlow;
+      font-style: normal;
+      line-height: 70px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .progressContainer {
+      position: relative;
+
+      .progress {
+        line-height: 70px;
+      }
+    }
+
+    .ht {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      width: 22px;
+      height: 18px;
+      color: #fff;
+      font-size: 10px;
+      font-family: 'PingFang SC Normal';
+      line-height: 18px;
+      text-align: center;
+      background: #46494c;
+      border-radius: 4px;
+      transform: translate(-50%, -50%);
+    }
+
+    .history {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 14px;
+      transform: translate(-50%, 0);
+
+      .dashHome {
+        position: absolute;
+        top: 16px;
+        left: 6px;
+      }
+
+      .dashOpponent {
+        position: absolute;
+        top: 35px;
+        left: 6px;
+      }
+
+      .iconHome {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .iconOpponent {
+        position: absolute;
+        top: 54px;
+        left: 0;
+      }
+
+      .icon {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+      }
+
+      .dash {
+        width: 0;
+        height: 18px;
+        line-height: 18px;
+        border: 1px dashed #999;
+      }
+    }
+  }
+}

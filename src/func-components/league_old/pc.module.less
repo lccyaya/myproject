@@ -1,0 +1,240 @@
+.league{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+    :global{
+        .ant-tabs-tab + .ant-tabs-tab{
+            margin-left: 120px;
+        }
+    }
+}
+.content{
+    position: relative;
+    width: 784px;
+    height: 588px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+    .close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        color: #999;
+        &:hover{
+            opacity: 0.65;
+        }
+    }
+    .title{
+        position: relative;
+        width: 100%;
+        margin: 0 0 20px;
+        color: #FA5900;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        font-family: "PingFang SC Bold";
+    }
+}
+
+.menu {
+    :global {
+      .ant-tabs-nav {
+        width: 100%;
+        .ant-tabs-nav-wrap .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            height: 36px;
+            margin-top: 0;
+            &.ant-tabs-tab-active {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+}
+
+.competition_list{
+    display: flex;
+    height: 308px;
+    flex-direction: row;
+    &.empty_list{
+      display: block;
+    }
+    .list{
+        overflow-y: auto;
+        width: 100%;
+        height: 308px;
+        transition: all .3s;
+    }
+    :global{
+        .ant-tabs{
+            background-color: #fafafa;
+            > .ant-tabs-nav{
+                width: 160px;
+            }
+        }
+        .ant-tabs-left {
+            > .ant-tabs-content-holder {
+                display: none;
+            }
+            .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab{
+                height: 36px;
+                margin-top: 0;
+            }
+            .ant-tabs-tab-active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.floor {
+    padding-bottom: 14px;
+    .title {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      &:before,&:after{
+        height: 1px;
+        background-color: #999;
+        width: 48px;
+        content: '';
+      }
+      span {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0 16px;
+        color: rgba(0,0,0,.85)
+      }
+    }
+    
+}
+.floorContent {
+  display: flex;
+  flex-wrap: wrap;
+  // &.has_keyword{
+  //   padding-top: 20px;
+  // }
+}
+.has_keyword{
+  margin-bottom: 30px;
+}
+
+.logoCon {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 12px;
+    position: relative;
+    cursor: pointer;
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      position: relative;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: calc(50% + 8px);
+    }
+
+    .name {
+      font-family: PingFang SC Normal;
+      font-size: 12px;
+      line-height: 28px;
+      color: #333;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      overflow: hidden;
+      padding: 0 4px;
+    }
+
+    .name:hover {
+      overflow: visible;
+
+    //   .nameText {
+    //     background: rgb(255, 255, 255);
+    //     border: rgb(105, 105, 105) solid 1px;
+    //   }
+    }
+  }
+
+  .logoCon:hover {
+    opacity: 0.65;
+  }
+
+  .footer {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: space-between;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 196px;
+      flex: auto;
+
+      .selectedTip {
+        color: #666;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: 4px;
+      }
+    }
+
+    .button {
+      height: 46px;
+      width: 125px;
+      font-size: 16px;
+      font-family: 'PingFang SC Bold';
+      border-radius: 8px;
+    }
+
+    .close {
+      width: 120px;
+    }
+
+    .choose {
+      margin-left: 16px;
+    }
+    .back {
+      margin-left: auto;
+    }
+}
+
+.hidden{
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}

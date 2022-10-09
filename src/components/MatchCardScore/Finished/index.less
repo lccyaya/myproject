@@ -1,0 +1,23 @@
+.wrapper {
+  &.hasLive {
+    display: flex;
+    align-items: stretch;
+    .left {
+      background-color: #fff;
+      width: 61%;
+      flex-shrink: 0;
+      height: 275px;
+      :global {
+        .ant-spin-nested-loading {
+          height: 100%;
+        }
+      }
+    }
+    .right {
+      background-color: #fff;
+      margin-left: 12px;
+      flex: auto;
+      height: 275px;
+    }
+  }
+}

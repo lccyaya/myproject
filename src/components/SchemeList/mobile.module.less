@@ -1,0 +1,191 @@
+.program_list {
+  &.boundary_gap {
+    .item {
+      padding: 0 15px 12px;
+      position: relative;
+    }
+  }
+  .item {
+    margin-top: 12px;
+    padding: 0 0 12px;
+    background: #fff;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.4);
+    &:last-child {
+      border-bottom: none;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .avatar {
+        display: flex;
+        align-items: center;
+
+        .avatar_img {
+          margin-right: 8px;
+        }
+        .content {
+          .nickname {
+            max-width: 100px;
+            overflow: hidden;
+            color: #333;
+            font-weight: 400;
+            font-size: 14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      .tags {
+        margin-top: 4px;
+      }
+      .hit_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #fff;
+        background-color: #D61E25;
+        border-radius: 60px 0 0 60px;
+        padding: 0 15px 0 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // height: 36px;
+        .hit {
+          color: #fff;
+          font-weight: bold;
+          font-family: Barlow-Bold, Barlow;
+          font-size: 20px;
+          line-height: 1;
+        }
+        .hit_num {
+          font-size: 20px;
+          line-height: 1;
+        }
+        .symbol {
+          margin-left: 2px;
+          color: #fff;
+          font-size: 14px;
+          line-height: 1;
+        }
+        .label {
+          font-size: 12px;
+        }
+      }
+    }
+    .desc {
+      display: -webkit-box;
+      margin-top: 8px;
+      overflow: hidden;
+      color: #333;
+      font-weight: 400;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .match {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding: 6px 12px;
+      color: #8b8b8b;
+      font-size: 12px;
+      background: #f3f3f3;
+      border-radius: 4px;
+      .team_wrap {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .team {
+          flex: 1;
+          margin: 0 5px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-align: right;
+          text-overflow: ellipsis;
+          &:last-child {
+            text-align: left;
+          }
+        }
+      }
+      .match_name {
+        width: 70px;
+        display: flex;
+        align-items: center;
+        span {
+          max-width: 70px;
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      
+      }
+      .time {
+        width: 70px;
+        white-space: nowrap;
+        text-align: right;
+      }
+    }
+    .hit_status {
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      color: #8b8b8b;
+      font-weight: 400;
+      font-size: 12px;
+      .is_refund {
+        color: #d61e25;
+        margin-left: 8px;
+      }
+      .gold {
+        color: #d28601;
+      }
+      .stop_sale {
+        color: #d61e25;
+      }
+      .type {
+        display: flex;
+        align-items: center;
+        img {
+          display: block;
+          width: 24px;
+          height: 24px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+.empty_wrap {
+  text-align: center;
+  .tips {
+    margin-top: 12px;
+    color: #191919;
+    font-size: 14px;
+    text-align: center;
+  }
+  :global {
+    button {
+      height: auto;
+      margin: 12px auto 0;
+      padding: 8px 36px;
+      font-size: 14px;
+      background: #FA5900;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.wrapper {
+  margin-top: 16px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 34px;
+    padding: 0 16px;
+    .left {
+      display: flex;
+      align-items: center;
+      .title {
+        color: #000028;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+      }
+      .line {
+        width: 1px;
+        height: 15px;
+        margin: 0 8px;
+        background-color: #e2e2e2;
+      }
+      .subTitle {
+        margin-left: 8px;
+        color: #848494;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .text {
+        color: #848494;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+      }
+      .icon {
+        margin-left: 4px;
+        color: #848494;
+        font-size: 10px;
+      }
+    }
+  }
+  .panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 0 16px;
+    padding-bottom: 8px;
+    overflow-x: scroll;
+    .card {
+      flex-shrink: 0;
+      width: 170px;
+      height: 112px;
+      margin-right: 10px;
+      overflow: hidden;
+      background: url('~@/assets/home/major_match_bg.png') no-repeat;
+      background-size: 100% 100%;
+      // border-radius: 4px;
+      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+      &:last-child {
+        margin-right: 0;
+        &:after {
+          position: absolute;
+          right: -16px;
+          display: block;
+          width: 16px;
+          height: 1px;
+          content: '';
+        }
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // height: 26px;
+        margin-top: 10px;
+        padding: 0 10px 0 12px;
+        overflow: hidden;
+        // background: #f0f9f5;
+        .logo {
+          flex-shrink: 0;
+          width: 15px;
+          height: 15px;
+          object-fit: contain;
+        }
+        .name {
+          margin-left: 4px;
+          padding-right: 4px;
+          overflow: hidden;
+          color: #000028;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .remind {
+          margin-left: auto;
+          color: #666;
+          font-size: 14px;
+          &.active {
+            color: #fa5900;
+          }
+        }
+      }
+      .body {
+        padding: 6px 12px 10px 12px;
+        // background-color: #fff;
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 22px;
+          &.future {
+            .time {
+              color: #696969;
+              font-weight: normal;
+              line-height: 14px;
+              transform: scale(0.833);
+              transform-origin: 0 center;
+            }
+            .videoTip {
+              opacity: 0.4;
+            }
+          }
+          .time {
+            color: #fa5900;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            white-space: nowrap;
+          }
+          .videoTip {
+            display: flex;
+            align-items: center;
+            .icon {
+              width: 10px;
+              height: 10px;
+              background: url('../../../../assets/liveVideo.svg') no-repeat 0 0;
+              background-size: cover;
+            }
+            .text {
+              margin-left: 2px;
+              color: #a30b0b;
+              font-size: 12px;
+              line-height: 16px;
+              white-space: nowrap;
+              transform: scale(0.833);
+              transform-origin: 0 center;
+            }
+          }
+        }
+        .bottom {
+          margin-top: 8px;
+          .side {
+            display: flex;
+            align-items: center;
+            & + .side {
+              margin-top: 6px;
+            }
+
+            .team {
+              display: flex;
+              flex: auto;
+              align-items: center;
+              overflow: hidden;
+              .logo {
+                flex-shrink: 0;
+                width: 16px;
+                height: 16px;
+              }
+              .name {
+                margin-left: 8px;
+                padding-right: 4px;
+                overflow: hidden;
+                color: #000028;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 19px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+            .score {
+              &.active {
+                color: #fa5900;
+              }
+              color: #999;
+              font-weight: 500;
+              font-size: 14px;
+              font-style: italic;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

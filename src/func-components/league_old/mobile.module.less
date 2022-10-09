@@ -1,0 +1,236 @@
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0 ,0, .2);
+}
+.league{
+    position: fixed;
+    left: 0;
+    bottom: -200%;
+    z-index: 600;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    &.show{
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    :global{
+        .ant-tabs-tab{
+            margin: 0 20px !important;
+            padding: 12px 0 !important;
+            &:first-child{
+                // margin-left: 16px;
+            }
+        }
+    }
+}
+.content{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+    .close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 1;
+        color: #999;
+        font-size: 20px;
+    }
+    .title{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+        color: #FA5900;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        font-family: "PingFang SC Bold";
+    }
+}
+
+.menu {
+    :global {
+      .ant-tabs-nav {
+        width: 100%;
+        .ant-tabs-nav-wrap .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            height: 36px;
+            margin-top: 0;
+            &.ant-tabs-tab-active {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+}
+
+.competition_list{
+    overflow-y: auto;
+    height: 350px;
+    max-height: 45vh;
+    .list{
+        display: flex;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+        transition: all .3s;
+        flex-wrap: wrap;
+    }
+    :global{
+        .ant-tabs{
+            background-color: #fafafa;
+            > .ant-tabs-nav{
+                width: 160px;
+            }
+        }
+        .ant-tabs-left {
+            > .ant-tabs-content-holder {
+                display: none;
+            }
+            .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab{
+                height: 36px;
+                margin-top: 0;
+            }
+            .ant-tabs-tab-active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.floor {
+  width: 100%;
+  padding-bottom: 14px;
+  .title {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    &:before,&:after{
+      height: 1px;
+      background-color: #999;
+      width: 48px;
+      content: '';
+    }
+    span {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      margin: 0 16px;
+      color: rgba(0,0,0,.85)
+    }
+  }
+  .floorContent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.has_keyword{
+  margin-bottom: 20px;
+}
+.logoCon {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    cursor: pointer;
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      position: relative;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: calc(50% + 8px);
+    }
+
+    .name {
+      display: -webkit-box;
+      width: 100%;
+      font-family: PingFang SC Normal;
+      font-size: 12px;
+      line-height: 17px;
+      color: #666;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      overflow: hidden;
+      padding: 16px 4px 0;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .footer {
+    display: flex;
+    height: 60px;
+    padding: 0 11px 0 16px;
+    align-items: center;
+    text-align: right;
+    background: #F8F8F8;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #666;
+    font-size: 12px;
+    .title {
+      font-size: 20px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: auto;
+
+      .selectedTip {
+        color: #666;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: 12px;
+      }
+    }
+
+    .button {
+      height: 40px;
+      width: 76px;
+      font-size: 14px;
+      font-family: 'PingFang SC Bold';
+      border-radius: 4px;
+    }
+
+    .close {
+      width: 120px;
+    }
+
+    .back {
+      margin-left: auto;
+    }
+}
+
+.hidden{
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.search{
+    padding: 0 16px 8px;
+}

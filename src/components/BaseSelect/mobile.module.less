@@ -1,0 +1,101 @@
+.select_wrap {
+  height: 44px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  
+  .select_box {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .expend {
+    width: 57px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 16px;
+    z-index: 100;
+    .icon {
+      transform: rotate(90deg);
+      color: #999;
+    }
+  }
+  
+  .item {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-right: 24px;
+    height: 44px;
+    position: relative;
+    line-height: 44px;
+    
+    &.active {
+      font-size: 16px;
+      font-weight: 600;
+      color: @primary-color;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 42px;
+        height: 2px;
+        background: @primary-color;
+        border-radius: 50px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.overlayClassName {
+  max-height: 288px;
+  overflow: scroll;
+  border-radius: 6px;
+  box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08);
+  top: 37px !important;
+
+  &::before {
+    display: none;
+  }
+  :global {
+   .ant-dropdown-menu {
+     min-width: 71px;
+     background: #FFF;
+     border-radius: 6px;
+     padding: 0 8px;
+   }
+   .ant-dropdown-menu-item {
+     font-size: 12px;
+     font-weight: 400;
+     color: #666;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+     padding: 8px 0;
+     text-align: center;
+     white-space: nowrap;
+     &:last-child {
+       border-bottom: none;
+     }
+     &:hover {
+       background: none;
+     }
+     &.ant-dropdown-menu-item-selected {
+       background: none;
+       color: @primary-color;
+     }
+   }
+  }
+ }

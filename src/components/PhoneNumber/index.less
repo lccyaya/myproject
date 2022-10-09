@@ -1,0 +1,136 @@
+@import '~antd/es/style/themes/default.less';
+.container {
+  box-sizing: border-box;
+  width: 400px;
+  max-height: 256px;
+  padding: 8px 24px;
+  overflow: scroll;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  
+  @media screen and (max-width: @screen-sm) {
+    width: 80.5833vw;
+  }
+  .search_box {
+    padding: 0 0 10px;
+    background: #fff;
+    .search {
+      height: 40px;
+      border-radius: 6px;
+      @media screen and (max-width: @screen-sm) {
+        height: 30px;
+      }
+    }
+  }
+
+  .list_wrap {
+    max-height: 190px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ebebeb;
+      color: #a8a8a8;
+      cursor: pointer;
+      &:last-child {
+        border: none;
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      &.active {
+        color: #FA5900;
+      }
+    }
+  }
+}
+
+.form_item_wrap {
+  &.focused {
+    :global {
+      .ant-input-group {
+        border: 1px solid #FA5900;
+        box-shadow: 0 0 0 2px rgba(250, 89, 0, 0.2);
+      }
+    }
+  }
+
+  :global {
+    .ant-input-group-wrapper-status-error {
+      .ant-input-group {
+        border: 1px solid #ff4d4f;
+        box-shadow: 0 0 0 2px rgba(255, 77, 99, 0.2);
+      }
+    }
+    .ant-input-group-wrapper-status-success {
+      .ant-input-group {
+        border: 1px solid #FA5900;
+      }
+      .ant-input-group-addon {
+        color: #FA5900;
+      }
+    }
+    .ant-input-group {
+      border: 1px solid #d9d9d9;
+      border-radius: 6px;
+    }
+    .ant-input-group-addon {
+      padding: 0;
+      background: #fff;
+      border: none;
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+    }
+    .ant-input-affix-wrapper {
+      border: none !important;
+      border-left: none;
+      border-radius: 0 6px 6px 0;
+      box-shadow: none !important;
+      font-size: 16px;
+      .ant-input {
+        font-size: 16px;
+      }
+    }
+  }
+  .form_item_send_btn {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    z-index: 1000;
+    margin-top: -12px;
+  }
+}
+
+.phone_prefix {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 16.5px 11px;
+  position: relative;
+  &::after {
+    content: '';
+    width: 1px;
+    height: 22px;
+    background-color: #c2c2c2;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+ 
+  .dial_code {
+    margin: 0 6px 0 6px;
+    color: #6c6c6c;
+    font-size: 14px;
+  }
+  @media screen and (max-width: @screen-sm) {
+    padding: 10.5px 11px;
+  }
+}

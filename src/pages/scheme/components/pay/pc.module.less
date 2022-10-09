@@ -1,0 +1,140 @@
+.pay_wrap {
+  height: 60px;
+  background: #E9F3EF;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  .pay_content {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .left_box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .pay_info {
+      display: flex;
+      align-items: center;
+    }
+    .coupon_info {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+      .used_status {
+        color: #D61E25;
+      }
+      .icon {
+        transform: rotate(90deg);
+        color: #8b8b8b;
+        margin-left: 4px;
+      }
+    }
+    .pay_coin {
+      font-size: 14px;
+      span {
+        color: #D28601;
+      }
+      .del {
+        color: #8B8B8B;
+        text-decoration: line-through;
+        margin-left: 4px;
+      }
+    }
+    button {
+      margin-left: 12px;
+      height: 30px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 4px 24px;
+      line-height: 1;
+    }
+  }
+}
+
+
+.modal_content {
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+
+    span {
+      color: #D28601;
+    }
+  }
+  .desc {
+    font-size: 16px;
+    color: #333;
+    margin-top: 12px;
+    text-align: center;
+    span {
+      color: #D28601;
+    }
+  }
+  .checkbox_wrap {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    color: #8B8B8B;
+    
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    button[ant-click-animating-without-extra-node]::after {
+      border: 0 none;
+      opacity: 0;
+      animation:none 0 ease 0 1 normal;
+    }
+    button {
+      flex: 1;
+      border-radius: 4px;
+      line-height: 1;
+      height:36px ;
+      font-size: 14px;
+      font-weight: 500;
+      &:first-child{
+        margin-right: 10px;
+        background: #FAFAFA;
+        color: #666;
+        border: none !important;
+      }
+    }
+  }
+
+}
+.popup_content {
+  .checkbox_wrap {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 13px;
+    span {
+      margin-left: 6px;
+      color: #333;
+    }
+  }
+  button {
+    width: 100%;
+    height: 52px;
+    line-height: 1;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #FFF;
+    margin-top: 30px;
+  }
+}

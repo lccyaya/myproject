@@ -1,0 +1,32 @@
+@import '~antd/es/style/themes/default.less';
+
+.switch {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  font-size: 14px;
+  .title {
+    display: inline-block;
+    padding-right: 4px;
+    color: #999;
+    line-height: 20px;
+  }
+  .button {
+    box-sizing: border-box;
+    width: 36px;
+    min-width: 36px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #999;
+    background-image: none;
+    &.active {
+      background-color: #FA5900;
+    }
+  }
+  :global {
+    .ant-switch-handle {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

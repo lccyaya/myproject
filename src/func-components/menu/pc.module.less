@@ -1,0 +1,21 @@
+.menu{
+    width: 100%;
+    :global{
+        .ant-menu-vertical .ant-menu-item{
+            margin: 0 0 4px;
+            &:last-child{
+                margin: 0;
+            }
+            &:active{
+                background-color: #ECF4F1;
+            }
+        }
+        .ant-menu-vertical .ant-menu-item-selected{
+            background-color: #ECF4F1;
+            &::after{
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+    }
+}

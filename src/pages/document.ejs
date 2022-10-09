@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <!-- <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5Q7QHR2');
+  </script> -->
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="rgba(255,255,254,1)">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+
+  <script>
+    window.publicPath = '<%= context.config.publicPath%>';
+  </script>
+  <style>
+    @media (max-width: 767px) {
+      .ant-pro-top-nav-header-logo a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .ant-pro-top-nav-header-logo img {
+        height: 24px !important;
+      }
+
+      .ant-pro-top-nav-header-menu {
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7QHR2" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script>
+    (function setDefaultLang() {
+      console.log('开始设置默认的语言')
+      var defaultLang = 'th';
+      var localKey = 'umi_locale';
+      var settingLang = localStorage.getItem(localKey);
+      if (settingLang) {
+        console.log('默认语言已经设置是', settingLang)
+        return;
+      }
+      var lang = navigator.language && navigator.language.toLocaleLowerCase();
+
+      var supportedLangs = {
+        'en-US': ['en', 'en-us'],
+        'zh-CN': ['zh', 'zh-cn'],
+        th: ['th', 'th-TH'],
+        ar: ['ar'],
+        id: ['id', 'id-ID'],
+        ms: ['ms'],
+        vi: ['vi'],
+        ko: ['ko', 'ko-KR'],
+        ja: ['ja', 'ja-JP'],
+        pt: ['pt'],
+        es: ['es'],
+      };
+      var item = Object.keys(supportedLangs).find((k) => supportedLangs[k].includes(lang));
+      console.log('默认设置语言是，', item || defaultLang)
+      localStorage.setItem('umi_locale', item || defaultLang);
+    })();
+    (function flexible(window, document) {
+      var docEl = document.documentElement;
+      var dpr = window.devicePixelRatio || 1;
+
+      // adjust body font size
+      function setBodyFontSize() {
+        if (document.body) {
+          document.body.style.fontSize = 12 * dpr + 'px';
+        } else {
+          document.addEventListener('DOMContentLoaded', setBodyFontSize);
+        }
+      }
+      setBodyFontSize();
+
+      // set 1rem = viewWidth / 10
+      function setRemUnit() {
+        var rem = docEl.clientWidth / 10;
+        docEl.style.fontSize = rem + 'px';
+      }
+
+      setRemUnit();
+
+      // reset rem unit on page resize
+      window.addEventListener('resize', setRemUnit);
+      window.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+          setRemUnit();
+        }
+      });
+
+      // detect 0.5px supports
+      if (dpr >= 2) {
+        var fakeBody = document.createElement('body');
+        var testElement = document.createElement('div');
+        testElement.style.border = '.5px solid transparent';
+        fakeBody.appendChild(testElement);
+        docEl.appendChild(fakeBody);
+        if (testElement.offsetHeight === 1) {
+          docEl.classList.add('hairlines');
+        }
+        docEl.removeChild(fakeBody);
+      }
+    })(window, document);
+  </script>
+  <div id="root"></div>
+
+  <script type="text/javascript">
+    document.write(
+      unescape(
+        "%3Cspan id='cnzz_stat_icon_1280411379'%3E%3C/span%3E%3Cscript async src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280411379%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E",
+      ),
+    );
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196818290-2"></script> -->
+
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-196818290-2');
+  </script>
+</body>
+
+</html>

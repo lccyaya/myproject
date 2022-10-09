@@ -1,0 +1,220 @@
+@import '~antd/es/style/themes/default.less';
+
+.switchRow {
+  height: 50px;
+  margin-top: 0;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: @screen-xs) {
+    padding-right: 16px;
+    justify-content: flex-start;
+  }
+
+  .switchButton {
+    background: #FFEBA5;
+    border-radius: 24px;
+    font-family: 'PingFang SC Normal';
+    font-weight: bold;
+    font-size: 14px;
+    //line-height: 22px;
+    text-align: center;
+    color: #454545;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    span {
+      margin-top: 2px;
+      margin-right: 4px;
+    }
+  }
+
+  .switchButton:hover {
+    opacity: 0.7;
+  }
+}
+
+// .bottom_icon{
+//   bottom: 32px;
+// }
+.main {
+  // margin-top: 12px;
+  padding-bottom: 40px;
+  &.min {
+    width: 774px;
+    margin: 12px auto 0;
+  }
+
+  .header {
+    position: relative;
+    height: 64px;
+
+    .datePicker {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      height: 24px;
+    }
+  }
+
+  .scrollContainer {
+    width: 100%;
+    //height: calc(100vh - 120px);
+    //height: calc(var(--vh, 1vh) * 100 - 120px);
+    //overflow: auto;
+
+    .listContainer {
+      margin-top: 24px;
+      margin-bottom: 12px;
+
+      .dateContainer {
+        color: #333;
+        font-weight: 500;
+        font-family: Barlow;
+        font-style: normal;
+        line-height: 32px;
+
+        .date {
+          font-size: 28px;
+        }
+
+        .month {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .listContainer:nth-child(1) {
+      margin-top: 0;
+    }
+
+    .liveListContainer {
+      margin-top: 0;
+    }
+
+    @media (max-width: @screen-xs) {
+      .main{
+        background-color: #f8f8f8;
+
+      }
+      .listContainer {
+        margin: 0;
+        // margin: 6px 0;
+      }
+    }
+  }
+}
+
+
+.upcomingMatchTip {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    background: url('../../assets/icon/hourglass.svg') no-repeat 0 0;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+  }
+  .text {
+    font-size: 18px;
+    color: #7F7F7F;
+    font-weight: 500;
+    margin-left: 6px;
+  }
+}
+
+.upcomingMore {
+  margin-top: 16px;
+  height: 40px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+
+@media (max-width: @screen-xs) {
+  .main{
+    padding-bottom: 70px;
+    // background-color: #f8f8f8;
+    &.min {
+      margin-top: 0;
+      max-width: 100%;
+    }
+    .upcomingMatchTip{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      height: 34px;
+      background: #FAFAFA;
+      align-items: center;
+      justify-content: center;
+      .text {
+        margin-left: 4px;
+        font-size: 12px;
+      }
+      .icon{
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .listContainer{
+    background-color: #f8f8f8;
+  }
+  .live_empty_bg{
+    background-color: #fff;
+  }
+  
+  .menu {
+    height: 24px;
+    margin: 16px 0;
+    line-height: 24px;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+.phone {
+  padding: 0;
+}
+
+.liveEmpty {
+  width: 327px;
+  height: 261px;
+  background: url('../../assets/image/live_empty.svg') no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto 30px auto;
+  @media screen and (max-width: @screen-xs) {
+    width: 262px;
+    height: 209px;
+    .text {
+      bottom: 24px !important;
+    }
+  }
+  .text {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+}
+
+.card_box{
+  display: block;
+  width: 100%;
+}

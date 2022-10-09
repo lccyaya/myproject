@@ -1,0 +1,298 @@
+@import '~antd/es/style/themes/default.less';
+
+// :global(.ant-pro-basicLayout) {
+//   overflow: hidden;
+// }
+
+// :global(.ant-layout) {
+//   background: #fff;
+// }
+
+// :global(.ant-layout-content) {
+//   background: #fff;
+// }
+
+:global(.ant-pro-page-container) {
+  background: #fff;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 96px);
+  height: calc(var(--vh, 1vh) * 100 - 96px);
+
+  .header {
+    height: 48px;
+    background: red;
+  }
+
+  .body {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+:global(.ant-message .anticon) {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+:global(.ant-message) {
+  font-size: 14px;
+}
+
+:global(.ant-modal-close) {
+  @media screen and (max-width: @screen-sm) {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+:global(.ant-modal-close-x) {
+  @media screen and (max-width: @screen-sm) {
+    width: 16px;
+    height: 16px;
+    font-size: 16px !important;
+  }
+}
+
+:global(.ant-dropdown-menu-item) {
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: @screen-sm) {
+
+  :global(.ant-empty) {
+    margin: 0 0.05rem;
+    font-size: 0.2rem;
+    line-height: 1.5715;
+    text-align: center;
+  }
+
+  :global(.ant-input-lg) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-form-item-extra) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-form-item-explain) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-btn-lg) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-form) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-btn) {
+    font-size: 0.3rem;
+  }
+
+  // :global(.ant-modal) {
+  //   max-width: 80vw !important;
+  // }
+
+  :global(.ant-input-clear-icon) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-input-affix-wrapper-lg) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-message .anticon) {
+    margin-right: 0.2rem;
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-message) {
+    font-size: 0.3rem;
+  }
+
+  :global(.ant-layout-header) {
+    z-index: 600 !important;
+  }
+
+  :global(.ant-spin-dot) {
+    font-size: 14px;
+  }
+
+  :global(.ant-spin-dot-item) {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+
+  :global(.ant-dropdown-menu-item) {
+    padding: 0.2rem;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  :global(.ant-table-thead > tr > th) {
+    text-align: center !important;
+  }
+
+  // // table
+  // :global(.ant-table-content table) {
+  //   // display: block;
+  //   // overflow: hidden;
+  //   // width: 100%;
+  //   // transform: scale(0.8);
+  // }
+
+  // :global(.ant-table-thead) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   // overflow: hidden;
+  //   width: 100%;
+  // }
+
+  // :global(.ant-table-tbody) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   overflow: hidden;
+  //   width: 100%;
+  // }
+
+  // :global(.ant-table-thead > tr) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   // overflow: hidden;
+  //   width: 100%;
+  // }
+  // :global(.ant-table-thead > tr > th) {
+  //   // width: 100%;
+  //   // width: 20%;
+  //   // display: inline-block;
+  //   // word-break: break-all;
+  //   flex: 1;
+  // }
+
+  // :global(.ant-table-tbody > tr) {
+  //   display: flex;
+  //   overflow: hidden;
+  //   width: 100%;
+  // }
+
+  // :global(.ant-table-tbody > tr > td) {
+  //   // width: 100%;
+  //   // display: inline-block;
+  //   // width: 20%;
+  //   flex: 1;
+  //   word-break: break-all;
+  // }
+}
+
+@media screen and (max-width: @screen-xs) {
+  :global(.ant-pro-global-header-collapsed-button) {
+    font-size: 0.4rem;
+  }
+
+
+  :global(.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected) {
+    height: 22px;
+    padding-left: 12px;
+  }
+
+  :global(.ant-pro-sider .ant-menu-item) {
+    height: 22px;
+    line-height: 22px;
+  }
+}
+
+.selecteItem {
+  margin: 0 12px;
+  font-size: 16px;
+  font-family: 'PingFang SC Bold';
+  line-height: 22px;
+}
+
+.classItem {
+  margin: 0 12px;
+  font-size: 16px;
+  font-family: 'PingFang SC Bold';
+  line-height: 22px;
+
+  :global(.ant-pro-menu-item) {
+    color: #999;
+  }
+}
+
+.title {
+  position: relative;
+  top: 2px;
+  min-width: 192px;
+  color: @primary-color;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: Barlow;
+  font-style: italic;
+  line-height: 48px;
+  cursor: pointer;
+}
+
+.menu {
+  overflow: hidden;
+  text-align: center;
+}
+
+.navTabWrapperBox{
+  height: 100%;
+  // background-color: red;
+}
+.navTabWrapper {
+  position: fixed;
+  // top: 48px;
+  width: 100%;
+  bottom: 0;
+  z-index: 4;
+  background: #fff;
+  .navTab {
+    color: #666;
+    font-weight: 500;
+    :global {
+      .ant-tabs-nav {
+        margin-bottom: 0 !important;
+      }
+      .ant-tabs-tab {
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+      .ant-tabs-tab {
+        height: 44px;
+        line-height: 44px;
+        + .ant-tabs-tab {
+          margin-left: 12px !important;
+        }
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+      .ant-tabs-ink-bar {
+        height: 2px !important;
+      }
+      .ant-tabs-nav-list {
+        padding: 0 16px;
+      }
+    }
+  }
+}
+.navTabWrapperChildren{
+  height: calc(100% - 44px);
+  // overflow: scroll;
+}

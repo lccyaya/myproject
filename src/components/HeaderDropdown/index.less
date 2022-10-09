@@ -1,0 +1,61 @@
+@import '~antd/es/style/themes/default.less';
+
+
+.container {
+
+  :global {
+   .ant-dropdown-menu {
+     min-width: 160px;
+     background: #FFF;
+     box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08), 0 16px 48px 0 rgba(0, 0, 0, 0.08);
+     border-radius: 16px;
+     padding: 0 24px;
+   }
+   .ant-dropdown-menu-item {
+     font-size: 16px;
+     font-weight: 400;
+     color: #666;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+     padding: 16px 0;
+     text-align: left;
+     white-space: nowrap;
+     min-width: 112px !important;
+ 
+     &:last-child {
+       border-bottom: none;
+     }
+     &:hover {
+       background: none;
+       color: @primary-color;
+     }
+     &.ant-dropdown-menu-item-selected {
+       background: none;
+       color: @primary-color;
+     }
+   }
+  }
+
+  @media screen and (max-width: @screen-xs) {
+    
+    :global {
+      .ant-dropdown-menu {
+        min-width: 108px;
+        padding: 0 12px;
+      }
+      .ant-dropdown-menu-item {
+        font-size: 13px;
+        padding: 9px 0;
+        min-width: 86px !important;
+      }
+    }
+    &.center {
+      :global {
+        .ant-dropdown-menu-item {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+}

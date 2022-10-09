@@ -1,0 +1,94 @@
+.tabs {
+  .tabs_header {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 47px;
+    &.tabs_header_card {
+      padding: 0;
+      height: 37px;
+    }
+    .tab_list {
+      display: flex;
+      align-items: center;
+      margin-bottom: -1px;
+      .item {
+        font-size: 16px;
+        font-weight: 400;
+        color: #45494C;
+        margin-right: 20px;
+        transition: all 0.3s;
+        position: relative;
+        padding-bottom: 4px;
+        
+        &.active {
+          font-size: 18px;
+          font-weight: 600;
+          color: @primary-color;
+          &::after {
+            width: 30px;
+            height: 3px;
+            background: @primary-color;
+            content: "";
+            position: absolute;
+            border-radius: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &.card {
+          font-size: 16px;
+          font-weight: 400;
+          color: #FFF;
+          min-width: 94px;
+          line-height: 36px;
+          text-align: center;
+          margin-right: 0;
+          height: 36px;
+          padding: 0;
+          &.active {
+            background: url(../../assets/tab_bg_right.svg);
+            background-size: cover;
+            font-size: 18px;
+            font-weight: 600;
+            color: @primary-color;
+            padding: 0 14px 0 26px;
+            &::after {
+              display: none;
+            }
+          }
+          &:first-child {
+            &.active {
+              background: url(../../assets/tab_bg_left.svg);
+              padding: 0 26px 0 14px;
+              background-size: cover;
+            }
+          }
+        }
+        
+      }
+
+    }
+   
+    .more {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFF;
+    }
+
+  }
+  .tabs_body {
+    .panel {
+      width: 100%;
+    }
+  }
+}
+.dark {
+  .tabs_header {
+    .more {
+      color: #666;
+    }
+  }
+}

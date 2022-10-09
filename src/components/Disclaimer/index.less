@@ -1,0 +1,74 @@
+@import '~antd/es/style/themes/default.less';
+
+.disclaimerContainer {
+
+    .modalTitle {
+        font-family: 'PingFang SC Bold';
+        font-size: 24px;
+        line-height: 32px;
+        color: @primary-color;
+        margin-bottom: 12px;
+    }
+
+    .modalSubtitle {
+        font-family: 'PingFang SC Normal';
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+        margin-bottom: 16px;
+    }
+
+
+    .buttonBg {
+        width: 16px;
+        height: 16px;
+        background: #eee;
+        border-radius: 4px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        .button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            // background: @primary-color;
+            background: transparent;
+            border-radius: 2px;
+            float: none;
+            display: table;
+            border: @primary-color solid 1px;
+        }
+
+        .button:hover {
+            opacity: 0.65;
+        }
+
+        .buttonHighlight {
+            background-color: @primary-color;
+        }
+    }
+
+    .nomore {
+        font-family: 'PingFang SC Normal';
+        font-size: 14px;
+        line-height: 16px;
+        color: #999;
+    }
+
+    .modalFooter {
+        justify-content: flex-end;
+        height: 48px;
+        margin-top: 32px;
+
+        .okButton {
+            float: right;
+            width: 120px;
+            height: 48px;
+            border-radius: 8px;
+        }
+    }
+}

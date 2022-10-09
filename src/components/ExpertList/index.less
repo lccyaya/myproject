@@ -1,0 +1,119 @@
+.expert_list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .item {
+    cursor: pointer;
+    background: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    width: calc(33.33% - 12px);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    .avatar{
+      width: 56px;
+      height: 56px;
+      position: relative;
+      margin: 0 auto;
+      .sale {
+        background: #ffe8e8;
+        border-radius: 4px;
+        padding: 0 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #D61E25;
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+      }
+    }
+    .nickname {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333;
+      margin: 8px auto 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 12px;
+    }
+    .desc {
+      font-size: 14px;
+      font-weight: 400;
+      color: #8B8B8B;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 13px;
+      text-align: center;
+    }
+    .scheme_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .win_rate {
+      font-size: 14px;
+      font-weight: 400;
+      color: #333;
+      .win_num {
+        margin-left: 5px;
+        color: #D61E25;
+      }
+      .lose_num {
+        color: #999;
+      }
+    }
+    .scheme_num {
+      font-size: 14px;
+      font-weight: 400;
+      color: #333;
+    }
+    .label_value {
+      display: flex;
+      align-items: center;
+      .label {
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        margin-right: 6px;
+      }
+      .value {
+        font-size: 30px;
+        font-weight: bold;
+        color: #D61E25;
+        line-height: 36px;
+        font-family: Barlow-Bold, Barlow;
+        display: flex;
+        align-items: center;
+      }
+      .symbol {
+        font-size: 16px;
+        margin-left: 4px;
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 9px;
+    }
+    .watch_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 9px;
+    }
+
+  }
+}
+.empty_wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

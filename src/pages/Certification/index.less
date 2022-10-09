@@ -1,0 +1,154 @@
+@import '~antd/es/style/themes/default.less';
+
+.modal {
+  overflow: hidden !important;
+  // width: 500px;
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  :global(.ant-modal) {
+    width: 500px !important;
+
+    @media screen and (max-width: @screen-sm) {
+      width: 9.14rem !important;
+    }
+  }
+
+  :global(.ant-modal-close) {
+    @media screen and (max-width: @screen-sm) {
+      top: 8px;
+      right: 8px;
+    }
+  }
+
+  :global(.ant-modal-close-x) {
+    @media screen and (max-width: @screen-sm) {
+      width: 16px;
+      height: 16px;
+      font-size: 16px !important;
+    }
+  }
+
+  :global(.ant-btn) {
+    height: 60px !important;
+    border-radius: 6px !important;
+    @media screen and (max-width: @screen-sm) {
+      height: 40px !important;
+    }
+  }
+  :global(.ant-btn-primary[disabled]) {
+    border: none !important;
+  }
+
+  :global(.ant-modal-content) {
+    border-radius: 12px !important;
+  }
+  .close_icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: @screen-sm) {
+    .close_icon {
+      right: 6px;
+      top: 6px;
+    }
+  }
+}
+
+.container {
+  padding: 30px 50px 30px;
+
+  @media screen and (max-width: @screen-sm) {
+    padding: 20px;
+  }
+
+  .main {
+    // width: 400px;
+    margin: 28px auto 0;
+
+    @media screen and (max-width: @screen-sm) {
+      // width: 260px;
+      margin-top: 20px;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      padding: 16.5px 11px;
+      border-radius: 6px;
+      @media screen and (max-width: @screen-sm) {
+        padding: 10px 11px;
+      }
+    }
+    :global {
+      .ant-input-affix-wrapper-status-success {
+        border: 1px solid #FA5900;
+        .ant-input-prefix {
+          color: #FA5900;
+          span {
+            color: #FA5900;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 32px;
+    color: #999;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  // height: 44px;
+  // line-height: 44px;
+  margin-bottom: 12px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 44px;
+  // margin-right: 16px;
+  vertical-align: top;
+}
+
+.title {
+  @media screen and (max-width: @screen-sm) {
+    font-size: 24px;
+  }
+
+  position: relative;
+  top: 2px;
+  color: @primary-color;
+  font-weight: 800;
+  font-size: 36px;
+  font-style: italic;
+
+  .logo {
+    width: auto !important;
+    height: 45px;
+  }
+}
+
+.desc {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .email {
+    color: @black;
+    margin-left: 5px;
+  }
+}

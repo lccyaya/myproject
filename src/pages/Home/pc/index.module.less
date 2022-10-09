@@ -1,0 +1,210 @@
+.top_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 648px;
+  background: url(../../../assets/home/top_bg.png) no-repeat center;
+  background-size: cover;
+
+  .top_title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 112px;
+  }
+  .top_des {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 38px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    line-height: 53px;
+  }
+}
+
+.middle_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  margin-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .middle_title {
+    color: #000000;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    line-height: 50px;
+  }
+
+  .first_box {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 46px;
+    background: url(../../../assets/home/des01_bg.png) no-repeat center;
+    background-size: cover;
+
+    .first_des {
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      left: 40px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 28px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      line-height: 40px;
+    }
+  }
+
+  .second_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    height: 660px;
+    margin-top: 60px;
+
+    .second_left_box {
+      position: relative;
+      width: 590px;
+      height: 660px;
+      background: url(../../../assets/home/des02_bg.png) no-repeat center;
+      background-size: cover;
+    }
+    .second_right01_box {
+      position: relative;
+      width: 590px;
+      height: 320px;
+      background: url(../../../assets/home/des03_bg.png) no-repeat center;
+      background-size: cover;
+    }
+    .second_right02_box {
+      position: relative;
+      width: 590px;
+      height: 320px;
+      background: url(../../../assets/home/des04_bg.png) no-repeat center;
+      background-size: cover;
+    }
+
+    .des_box {
+      position: absolute;
+      bottom: 56px;
+      left: 56px;
+      display: flex;
+      flex-direction: column;
+
+      .second_title {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 32px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        line-height: 45px;
+      }
+      .second_des {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .third_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin-top: 70px;
+    background: url(../../../assets/home/des05_bg.png) no-repeat center;
+    background-size: cover;
+
+    .third_des_box {
+      display: flex;
+      flex-direction: column;
+      padding-left: 136px;
+
+      .third_title {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 32px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        line-height: 45px;
+      }
+      .third_des {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 20px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.footer_container {
+  width: 100%;
+  height: 176px;
+  margin-top: 60px;
+  background-color: #000000;
+
+  .footer_box {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 24px;
+
+    .about_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #666666;
+
+      .about_left_box {
+        display: flex;
+        flex-direction: column;
+
+        .box_title {
+          margin-bottom: 8px;
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 20px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 28px;
+        }
+
+        .box_des {
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .copyright_box {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .copyright_title {
+        color: #919191;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        line-height: 20px;
+      }
+    }
+  }
+}

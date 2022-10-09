@@ -1,0 +1,200 @@
+@import '~antd/es/style/themes/default.less';
+
+.tipsContainer {
+  width: 100%;
+
+  .tips {
+    width: 100%;
+    // height: 72px;
+    margin-top: 16px;
+    padding: 8px;
+    background: #fafafa;
+    border-radius: 16px;
+
+    .nameContainer {
+      .logoContainer {
+        width: 72px;
+        height: 32px;
+        text-align: center;
+
+        .logo {
+          width: 32px;
+          height: 32px;
+          vertical-align: top;
+        }
+
+        @media screen and (max-width: @screen-sm) {
+          .logo {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+
+      .name {
+        width: 72px;
+        color: #333;
+        font-size: 12px;
+        font-family: 'PingFang SC Bold';
+        line-height: 18px;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        overflow: hidden;
+      }
+
+      .name:hover {
+        position: relative;
+        z-index: 3;
+        overflow: visible;
+
+        .nameText {
+          background: #fafafa;
+          border: rgb(200, 200, 200) solid 1px;
+        }
+      }
+    }
+
+    .info {
+      height: 100%;
+
+      .tipsInfo {
+        width: 100%;
+        height: 24px;
+        border-bottom: 1px solid #ddd;
+
+        .time {
+          color: #666;
+          font-weight: 500;
+          font-size: 10px;
+          font-family: Barlow;
+          font-style: normal;
+          line-height: 24px;
+          text-align: right;
+        }
+
+        .tipsValue {
+          color: #FA5900;
+          font-weight: bold;
+          font-size: 10px;
+          font-family: Barlow;
+          font-style: italic;
+          line-height: 24px;
+        }
+
+        .drawn {
+          color: #666;
+        }
+
+        .away {
+          color: #d80000;
+        }
+
+        .starNumber {
+          color: #d80000;
+          font-weight: bold;
+          font-size: 10px;
+          font-family: Barlow;
+          font-style: italic;
+          line-height: 20px;
+          text-align: right;
+        }
+
+        .starContainer {
+          width: 100%;
+          height: 24px;
+          padding-left: 4px;
+
+          .star {
+            color: #d80000;
+            font-size: 10px;
+            vertical-align: top;
+            margin-top: 2px;
+
+            :global(.ant-rate-star:not(:last-child)) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .matchInfo {
+        width: 100%;
+        min-height: 26px;
+
+        .vs {
+          margin-top: 8px;
+          color: #000;
+          font-size: 10px;
+          font-family: 'PingFang SC Bold';
+          line-height: 18px;
+          opacity: 0.3;
+          mix-blend-mode: normal;
+        }
+
+        .opponent {
+          margin-top: 8px;
+          color: #333;
+          font-size: 12px;
+          font-family: 'PingFang SC Bold';
+          line-height: 18px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          overflow: hidden;
+        }
+
+        .opponent:hover {
+          position: relative;
+          z-index: 3;
+          overflow: visible;
+
+          .opponentText {
+            background: #fafafa;
+            border: rgb(200, 200, 200) solid 1px;
+          }
+        }
+
+        .match {
+          padding-left: 12px;
+          margin-top: 8px;
+          color: #666;
+          font-size: 10px;
+          font-family: 'PingFang SC Normal';
+          line-height: 18px;
+          text-align: right;
+          mix-blend-mode: normal;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          overflow: hidden;
+        }
+
+        .match:hover {
+          position: relative;
+          z-index: 3;
+          overflow: visible;
+
+          .matchText {
+            background: #fafafa;
+            border: rgb(200, 200, 200) solid 1px;
+          }
+        }
+      }
+    }
+  }
+
+  .horizental {
+    width: 31.999%;
+    margin-left: 2%;
+  }
+
+  .horizental:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+
+  .tips:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+}

@@ -1,0 +1,224 @@
+.match_card_box {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 84px;
+  margin: 16px 0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  cursor: pointer;
+  .match_card_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% * 152 / 910);
+    height: 84px;
+    padding: 12px;
+  }
+  .match_card_time {
+    height: 16px;
+    color: #999;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .match_card_league_name {
+    width: 100%;
+    height: 16px;
+  }
+  .match_status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% * 76 / 910);
+    height: 84px;
+  }
+  .match_home,
+  .match_away {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(100% * 185 / 910);
+    height: 84px;
+    padding: 12px;
+  }
+  .match_away {
+    justify-content: flex-start;
+  }
+  .match_home_name,
+  .match_away_name {
+    max-width: calc(100% - 28px - 8px);
+    padding-right: 0;
+    padding-left: 6px;
+  }
+  .match_away_name {
+    padding-right: 6px;
+    padding-left: 0;
+  }
+  .match_red_card {
+    min-width: 14px;
+    height: 18px;
+    padding: 0 2px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Barlow-Bold;
+    line-height: 18px;
+    text-align: center;
+    background-color: #d20004;
+    border-radius: 2px;
+  }
+  .match_home_logo,
+  .match_away_logo {
+    width: 28px;
+    height: 28px;
+    margin-right: 0;
+    margin-left: 8px;
+    object-fit: contain;
+  }
+  .match_vs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% * 84 / 910);
+    height: 84px;
+    font-family: Barlow;
+  }
+  .match_away_logo {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+  .match_tag_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(100% * 189 / 910);
+    height: 84px;
+  }
+  .match_subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% * 39 / 910);
+    height: 84px;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 100%;
+    color: #666;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+
+.match_card_box:hover {
+  background: #fafafa;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+}
+
+.match_index_box {
+  width: 100%;
+  height: 140px;
+  margin: 16px 0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  .match_index_header {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  .match_index_header_left {
+    flex: 417;
+  }
+  .match_index_header_status {
+    display: flex;
+    flex: 76;
+    align-items: center;
+    justify-content: center;
+  }
+  .match_index_header_tags {
+    display: flex;
+    flex: 375;
+    justify-content: flex-end;
+  }
+  .match_index_subscribe {
+    display: flex;
+    flex: 42;
+    align-items: center;
+    justify-content: center;
+  }
+  .match_index_body {
+    display: flex;
+    height: 100px;
+  }
+  .match_index_body_left {
+    position: relative;
+    flex: 1;
+    height: 100px;
+  }
+  .match_index_body_left::after {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 1px;
+    height: 86px;
+    background-color: #ddd;
+    content: '';
+  }
+  .match_index_body_right {
+    position: relative;
+    flex: 1;
+    height: 100px;
+  }
+  .match_index_team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .match_index_team_logo {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    object-fit: contain;
+  }
+  .match_index_team_name {
+    width: 312px;
+    margin-right: 16px;
+  }
+  .match_index_team_score {
+    font-family: Barlow;
+  }
+  .match_index_row {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Barlow-Medium;
+  }
+  .match_index_col {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.match_index_box:hover {
+  background: #fafafa;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+}
+.match_subscribe:hover .match_subscribe_icon {
+  color: #FA5900 !important;
+}
+
+.match_index_subscribe:hover .match_subscribe_icon {
+  color: #FA5900 !important;
+}

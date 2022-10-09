@@ -1,0 +1,276 @@
+@import '~antd/es/style/themes/default.less';
+
+.teamLikeModal {
+
+    .container {
+        padding: 24px 32px;
+
+        .title {
+            font-family: 'PingFang SC Bold';
+            font-size: 24px;
+            line-height: 32px;
+            color: @primary-color;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+
+            .skip {
+                font-family: PingFang SC Bold;
+                font-size: 16px;
+                line-height: 22px;
+                color: #333;
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .skip:hover {
+                color: @primary-color;
+            }
+        }
+
+        .SearchOutlined {
+            font-size: 16px;
+            color: #ccc;
+            width: 32px;
+            cursor: pointer;
+        }
+
+        .SearchOutlined:hover {
+            color: @primary-color;
+        }
+
+        .search {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+
+        :global(.ant-input-affix-wrapper) {
+            border: none;
+            background: #FAFAFA;
+            border-radius: 8px !important;
+        }
+
+        :global(.ant-input) {
+            line-height: 24px;
+            font-size: 14px;
+            background: #FAFAFA;
+        }
+
+        :global(.ant-input-group-addon) {
+            display: none;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            height: 350px;
+            margin-top: 16px;
+
+            .list {
+
+                .logoCon {
+                    width: 25%;
+                    text-align: center;
+                    margin-bottom: 12px;
+                    position: relative;
+                    cursor: pointer;
+
+                    @media (max-width: @screen-xs) {
+                        width: 33.33%;
+                    }
+
+                    .logo {
+                        width: 48px;
+                        height: 48px;
+                        position: relative;
+                    }
+
+                    .check {
+                        position: absolute;
+                        top: 0;
+                        left: calc(50% + 8px);
+                    }
+
+                    .name {
+                        font-family: PingFang SC Normal;
+                        font-size: 12px;
+                        line-height: 28px;
+                        color: #333;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        word-break: break-all;
+                        overflow: hidden;
+
+                        @media (max-width: @screen-xs) {
+                            margin-top: 6px;
+                            line-height: 14px;
+                        }
+                    }
+                    
+                    .name:hover {
+                        overflow: visible;
+
+                        .nameText {
+                            background: rgb(255, 255, 255);
+                            border: rgb(105, 105, 105) solid 1px;
+                        }
+                    }
+                }
+
+                .logoCon:hover {
+                    opacity: 0.65;
+                }
+            }
+
+            .empty {
+                margin-top: 100px;
+            }
+
+            .cardContainer {
+                width: 33.33%;
+                height: 96px;
+                padding: 4px;
+
+                .card {
+                    width: 100%;
+                    height: 100%;
+                    background: #FAFAFA;
+                    border-radius: 8px;
+                    text-align: center;
+
+                    .plus {
+                        color: @primary-color;
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+
+                    .followme {
+                        font-family: 'PingFang SC Medium';
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #333;
+                    }
+
+                    .logo {
+                        width: 48px;
+                        height: 48px;
+                        margin-top: 20px;
+                    }
+
+                    .intro {
+                        text-align: left;
+
+                        .text {
+                            font-family: 'PingFang SC Medium';
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #333;
+                            margin-top: 20px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            word-break: break-all;
+                            overflow: hidden;
+                        }
+
+                        .text:hover {
+                            overflow: visible;
+
+                            .textName {
+                                background: #fff;
+                                border: rgb(200, 200, 200) solid 1px;
+                            }
+                        }
+
+                        .button {
+                            font-family: 'PingFang SC Medium';
+                            font-size: 12px;
+                            border-radius: 8px;
+                            height: 24px;
+                            line-height: 20px;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+
+                .follow {
+                    cursor: pointer;
+                }
+
+                .follow:hover {
+                    opacity: 0.65;
+                }
+            }
+
+
+            @media (max-width: @screen-xs) {
+                .cardContainer {
+                    width: 100%;
+                }
+            }
+        }
+
+        .footer {
+            text-align: right;
+
+            .title {
+                font-size: 20px;
+            }
+
+            .button {
+                height: 48px;
+                font-family: 'PingFang SC Bold';
+                font-size: 16px;
+                border-radius: 8px;
+            }
+
+            .close {
+                min-width: 120px;
+            }
+
+            .choose {
+                min-width: 200px;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    @media (max-width: @screen-xs) {
+        .container {
+            padding: 4px 8px;
+
+            .title {
+                font-size: 18px;
+            }
+
+            :global(.ant-menu-item) {
+                padding: 0 6px !important;
+            }
+
+            .footer {
+                margin-top: 12px;
+
+                .button {
+                    height: 32px;
+                    font-size: 12px;
+                    border-radius: 8px;
+                }
+
+                .close {
+                    min-width: 80px;
+                }
+
+                .choose {
+                    min-width: 120px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

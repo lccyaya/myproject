@@ -1,0 +1,166 @@
+.wrapper {
+  position: relative;
+  margin-top: 16px;
+  .wrapperTitle {
+    margin-bottom: 12px;
+    padding-left: 16px;
+    color: #46494c;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 22px;
+  }
+
+  .slide {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 91.4%;
+    margin: 0 auto;
+    padding-top: 59.4%;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 4px;
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      min-height: 73px;
+      padding-bottom: 4px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.32) 20%,
+        #000000 100%
+      );
+      .leagueName {
+        position: relative;
+        padding: 0 64px;
+        overflow: hidden;
+        color: #fff;
+        font-size: 12px;
+        line-height: 17px;
+        white-space: nowrap;
+        text-align: center;
+        text-overflow: ellipsis;
+        .status {
+          position: absolute;
+          top: 0;
+          left: 6px;
+        }
+      }
+      .teams {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+        padding: 0 16px;
+        overflow: hidden;
+        .score {
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          justify-content: center;
+          padding: 0 8px;
+          color: #fff;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          .line {
+            width: 4px;
+            height: 1px;
+            margin: 0 4px;
+            margin-top: 2px;
+            background-color: #fff;
+          }
+        }
+        .team {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: flex-end;
+          overflow: hidden;
+          &.reverse {
+            flex-direction: row-reverse;
+            .name {
+              text-align: left;
+            }
+            .logo {
+              margin-right: 6px;
+              margin-left: 0;
+              object-fit: contain;
+            }
+          }
+          .name {
+            overflow: hidden;
+            color: #fff;
+            font-size: 14px;
+            line-height: 20px;
+            white-space: nowrap;
+            text-align: right;
+            text-overflow: ellipsis;
+          }
+          .logo {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-left: 6px;
+            object-fit: contain;
+          }
+        }
+      }
+      .videos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+        color: #fff;
+        .text {
+          margin-left: 2px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        .video {
+          display: flex;
+          align-items: center;
+          .icon {
+            //width: 12px;
+            //height: 12px;
+            font-size: 12px;
+          }
+        }
+        .line {
+          width: 1px;
+          height: 20px;
+          margin: 0 14px;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .indicator {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    .item {
+      width: 4px;
+      height: 4px;
+      margin-left: 4px;
+      background: #d6d6d6;
+      border-radius: 50px;
+      opacity: 0.8;
+      transition: width 0.3s;
+      &.active {
+        width: 8px;
+      }
+    }
+  }
+}

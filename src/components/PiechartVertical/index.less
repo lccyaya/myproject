@@ -1,0 +1,66 @@
+@import '../../assets/theme.less';
+
+.pieContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+
+  .piechart {
+    width: 98px;
+    margin-top: 12px;
+    text-align: center;
+
+    .pie {
+      width: 60px;
+      height: 60px;
+
+      :global(.ant-progress-text) {
+        font-weight: 600;
+        font-size: 16px;
+        font-family: Barlow;
+        font-style: normal;
+        line-height: 24px;
+      }
+    }
+
+    .number {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: Barlow;
+      font-style: normal;
+      line-height: 22px;
+    }
+
+    @media (max-width: @screen-xs) {
+      .number {
+        margin-top: 0;
+      }
+    }
+
+    .home {
+      color: @home-color;
+
+      :global(.ant-progress-text) {
+        color: @home-color;
+      }
+    }
+
+    .draw {
+      color: @draw-color;
+
+      :global(.ant-progress-text) {
+        color: @draw-color;
+      }
+    }
+
+    .away {
+      color: @away-color;
+
+      :global(.ant-progress-text) {
+        color: @away-color;
+      }
+    }
+  }
+}

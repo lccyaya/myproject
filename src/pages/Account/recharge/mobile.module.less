@@ -1,0 +1,136 @@
+.recharge {
+  .section {
+    .label {
+      font-size: 16px;
+      font-weight: 500;
+      color: #46494C;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .total {
+     
+      .value {
+        font-size: 28px;
+        font-weight: 600;
+        color: #8F5B00;
+        margin-right: 4px;
+      }
+      .tip {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    .record {
+      font-size: 14px;
+      color: #8B8B8B;
+    }
+    .select_box {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        background: #F8F8F8;
+        border-radius: 4px;
+        border: 1px solid #F8F8F8;
+        margin-right: 13px;
+        margin-bottom: 13px;
+        width: calc(33.33% - 9px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 8px 0;
+        min-height: 61px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &.item_row {
+          flex-direction: row;
+        }
+        &.active {
+          border: 1px solid #FA5900;
+        }
+        .gold_icon {
+          display: flex;
+          align-items: center;
+          position: relative;
+          img {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          .gold_coin_val {
+            font-size: 18px;
+            font-weight: 500;
+            color: #191919;
+            margin-left: 4px;
+            line-height: 30px;
+          }
+          .give_away {
+            font-size: 14px;
+            font-weight: 600;
+            color: #FDA908;
+            margin-left: 4px;
+            position: absolute;
+            width: 40px;
+            right: -44px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+          }
+        }
+        .price {
+          font-size: 12px;
+          color: #999;
+          margin-top: 3px;
+        }
+        .icon {
+          width: 36px;
+          height: 36px;
+          margin-right: 12px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 4px;
+      border-radius: 4px;
+      padding: 6px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .agreement {
+      font-size: 12px;
+      color: #999;
+      margin-top: 24px;
+      a {
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.modal_content {
+  .success {
+    font-size: 16px;
+    color: #FA5900;
+    text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid rgba(216,216,216,0.4000);
+    border-bottom: 1px solid rgba(216,216,216,0.4000);
+    margin: 10px -30px 0;
+  }
+  .fail {
+    font-size: 16px;
+    color: #8B8B8B;
+    text-align: center;
+    padding: 16px 0 0;
+    margin: 0 -30px;
+  }
+}

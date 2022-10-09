@@ -1,0 +1,46 @@
+@import '~antd/es/style/themes/default.less';
+
+.wrapper {
+  .content {
+    width: 40px;
+    line-height: 18px;
+    padding-top: 2px;
+
+    .text {
+      font-size: 16px;
+      font-weight: 500;
+      font-style: italic;
+      font-family: Barlow;
+    }
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 10px solid red;
+  }
+  @media screen and (max-width: @screen-sm) {
+    .content {
+      width: 20px;
+      line-height: 9px;
+      padding-top: 1px;
+
+      .text {
+        font-size: 8px;
+        font-weight: 500;
+        font-style: italic;
+        font-family: Barlow;
+      }
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-right: 10px solid white;
+      border-top: 5px solid red;
+    }
+  }
+}

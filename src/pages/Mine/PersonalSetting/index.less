@@ -1,0 +1,88 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #fff;
+}
+.container {
+  height: 100%;
+  background-color: #f7fafb;
+}
+.items_container {
+  margin-top: 10px;
+  background-color: #fff;
+
+  .item_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 52px;
+    margin: 0px 10px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    .item_content {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .nickname {
+        color: #999999;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .item_title {
+      padding: 14px;
+      color: #202032;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    .arrow_icon {
+      padding: 14px;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  height: 52px;
+
+  .title {
+    color: #202032;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.footer_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  .header_box {
+    display: flex;
+    justify-content: flex-end;
+    .close_box {
+      padding: 0px 0px 10px 10px;
+    }
+  }
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+    }
+    input {
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+}

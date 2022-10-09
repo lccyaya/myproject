@@ -1,0 +1,154 @@
+@import '~antd/es/style/themes/default.less';
+@media screen and (max-width: @screen-sm) {
+  input {
+    font-size: 12px;
+  }
+}
+.tip {
+  @media screen and (max-width: @screen-sm) {
+    font-size: 14px;
+  }
+}
+.container {
+
+  .avatarWrapper {
+    .avatar {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .item {
+    margin-bottom: 20px;
+    .content {
+      margin-top: 8px;
+      background: #fafafa;
+      font-size: 16px;
+      font-family: 'PingFang SC';
+      line-height: 24px;
+      color: #333;
+      vertical-align: middle;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 500;
+      @media screen and (max-width: @screen-sm) {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+
+    .password {
+      cursor: pointer;
+      color: @primary-color;
+      background: fade(@primary-color, 6%);
+    }
+  }
+
+  .label {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'PingFang SC';
+    line-height: 32px;
+  }
+
+  .main {
+    margin-top: 32px;
+
+    :global(.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before) {
+      display: none;
+    }
+
+    :global(.ant-input-affix-wrapper-lg) {
+      @media screen and (max-width: @screen-sm) {
+        font-size: 14px;
+      }
+    }
+
+    :global(.ant-btn) {
+      // height: 60px !important;
+      border-radius: 6px !important;
+
+      @media screen and (max-width: @screen-sm) {
+        height: 1rem;
+        min-width: 1.5rem;
+      }
+    }
+
+  }
+
+  .divide {
+    margin: 40px 0;
+  }
+
+  .social {
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'PingFang SC';
+      line-height: 32px;
+    }
+
+    .socialItem {
+      margin-top: 24px;
+
+      .subtitle {
+        .label {}
+
+        .divide {
+          font-size: 18px;
+          font-weight: bold;
+          font-family: 'PingFang SC';
+          line-height: 32px;
+          color: #666;
+          padding: 0 6px;
+        }
+
+        .nickname {
+          font-size: 18px;
+          font-weight: bold;
+          font-family: 'PingFang SC';
+          line-height: 32px;
+          color: #666;
+        }
+      }
+
+      .handler {
+        .box {
+          margin-top: 14px;
+          display: inline-block;
+          height: 48px;
+          border-radius: 6px;
+          background: #fafafa;
+          padding: 12px 12px;
+          position: relative;
+          cursor: pointer;
+
+          .icon {
+            font-size: 24px;
+            vertical-align: middle;
+          }
+
+          .name {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'PingFang SC';
+            line-height: 24px;
+            color: #333;
+            margin-left: 6px;
+            vertical-align: middle;
+          }
+
+          .untie {
+            cursor: pointer;
+            font-size: 12px;
+            padding: 6px;
+            right: 2px;
+            top: 2px;
+            position: absolute;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}

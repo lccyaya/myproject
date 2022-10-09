@@ -1,0 +1,104 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+
+  :global(.codebox-container) {
+    margin-bottom: 80px;
+  }
+
+  :global {
+    .@{ant-prefix}-tabs-nav-list {
+      font-size: 16px;
+    }
+  }
+
+  :global(.codebox-field-wrap) {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 16px !important;
+
+    input {
+      font-size: 16px !important;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+      width: 0.8rem !important;
+      height: 0.8rem !important;
+      margin: 0.2rem !important;
+    }
+
+    input {
+      @media screen and (max-width: @screen-sm) {
+        font-size: 0.2rem !important;
+      }
+    }
+  }
+
+  .iconWrapper {
+    border-radius: 36px;
+    background: #f2f2f2;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    .icon {
+      // margin-left: 16px;
+      display: inline-block;
+      margin: 24px;
+      color: rgba(0, 0, 0, 0.2);
+      font-size: 24px;
+      vertical-align: middle;
+
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+
+
+  .item {
+    margin-top: 25px;
+    line-height: 22px;
+    text-align: center;
+
+    .tips {
+      line-height: 22px;
+      text-align: left;
+      text-align: center;
+      ;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .loginIcon {
+      margin-top: 24px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .register {
+      float: right;
+    }
+  }
+
+  .prefixIcon {
+    color: #666;
+    font-size: @font-size-base;
+    margin-right: 4px;
+  }
+}
+
+.send_code {
+  margin: 24px 0 16px;
+  .code_text {
+    float: right;
+    margin-bottom: 16px;
+    color: #aaa;
+  }
+  a {
+    float: right;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+}

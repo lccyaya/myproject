@@ -1,0 +1,212 @@
+@import '~antd/es/style/themes/default.less';
+
+.playerContainer {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+  .head {
+    margin: 12px 0 8px 0;
+
+    .title {
+      color: #333333;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: 'PingFang SC Bold';
+      line-height: 22px;
+    }
+
+    .intro {
+      color: #999999;
+      font-size: 12px;
+      font-family: 'PingFang SC Medium';
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+
+  .coach {
+    width: 100%;
+
+    .title {
+      margin-top: 12px;
+      color: #333333;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: 'PingFang SC Bold';
+      line-height: 22px;
+    }
+
+    .content {
+      display: flex;
+      width: 100%;
+
+      .cardCon {
+        width: 50%;
+        height: 66px;
+        margin: 4px 0;
+
+        .card {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          padding: 12px 16px;
+          background: #fafafa;
+          border-radius: 4px;
+
+          @media screen and (max-width: @screen-xs) {
+            padding: 12px 4px;
+          }
+
+          .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            object-fit: contain;
+
+            @media screen and (max-width: @screen-xs) {
+              margin-right: 8px;
+            }
+          }
+
+          .textContent {
+            @media screen and (max-width: @screen-xs) {
+              width: calc(100% - 48px);
+            }
+
+            .name {
+              color: #333333;
+              font-size: 14px;
+              font-family: 'PingFang SC Medium';
+              line-height: 22px;
+
+              @media screen and (max-width: @screen-xs) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+              }
+            }
+
+            .info {
+              color: #666666;
+              font-size: 12px;
+              font-family: 'PingFang SC Medium';
+              line-height: 20px;
+
+              @media screen and (max-width: @screen-xs) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+              }
+            }
+          }
+        }
+      }
+
+      .cardCon:nth-child(2n + 1) {
+        padding-right: 2px;
+      }
+
+      .cardCon:nth-child(2n + 2) {
+        padding-left: 2px;
+      }
+    }
+  }
+
+  .player {
+    width: 100%;
+
+    .card {
+      margin: 4px 0;
+
+      .leftCon {
+        height: 66px;
+        padding-right: 2px;
+
+        .left {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          padding: 12px 16px;
+          background: #fafafa;
+          border-radius: 4px;
+
+          @media screen and (max-width: @screen-xs) {
+            padding: 12px 4px;
+          }
+
+          .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            object-fit: contain;
+
+            @media screen and (max-width: @screen-xs) {
+              margin-right: 8px;
+            }
+          }
+
+          .textContent {
+            @media screen and (max-width: @screen-xs) {
+              width: calc(100% - 48px);
+            }
+
+            .name {
+              color: #333333;
+              font-size: 14px;
+              font-family: 'PingFang SC Medium';
+              line-height: 22px;
+
+              @media screen and (max-width: @screen-xs) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+              }
+            }
+
+            .info {
+              color: #666666;
+              font-size: 12px;
+              font-family: 'PingFang SC Medium';
+              line-height: 20px;
+
+              @media screen and (max-width: @screen-xs) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+              }
+            }
+          }
+        }
+      }
+
+      .labelCon {
+        height: 66px;
+        padding-right: 2px;
+        padding-left: 2px;
+
+        .label {
+          width: 100%;
+          height: 100%;
+          padding-left: 4px;
+          color: #333333;
+          font-weight: bold;
+          font-size: 14px;
+          font-family: 'PingFang SC Bold';
+          line-height: 66px;
+          text-align: center;
+          background: #fafafa;
+          border-radius: 4px;
+        }
+      }
+
+      .labelCon:nth-child(4) {
+        padding-right: 0;
+      }
+    }
+  }
+}

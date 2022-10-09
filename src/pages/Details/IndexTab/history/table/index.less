@@ -1,0 +1,139 @@
+@import '~@/assets/theme.less';
+
+.markWrapper {
+  .mark {
+    opacity: 1;
+  }
+}
+
+.mark {
+  position: absolute;
+  top: -21px;
+  left: 16px;
+  padding: 0 !important;
+  border-bottom: none !important;
+  opacity: 0;
+  @media screen and (max-width: @screen-sm) {
+    top: -16px;
+    left: 6px;
+  }
+}
+
+.title {
+  position: relative;
+  text-align: center;
+
+  .name {
+    display: inline-block;
+    padding: 0 15px;
+    color: @font-color-6;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 32px;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 2px;
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+.company {
+  // :first-child {
+  //   border-bottom: 6px #fff solid;
+  // }
+
+  &.home,
+  &.draw {
+    .spot {
+      color: #d80000;
+    }
+  }
+  &.away {
+    .spot {
+      color: #FA5900;
+    }
+  }
+
+  div,
+  span {
+    padding: 0 15px;
+    color: @font-color-6;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 32px;
+    // text-align: center;
+    border-radius: 2px;
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+.stats {
+  margin-bottom: 24px;
+  :global(.ant-table-thead > tr > th) {
+    padding: 3px 15px;
+    background: #fafafa;
+    border: 2px #fff solid;
+    @media screen and (max-width: @screen-sm) {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    padding: 0;
+    // padding: 3px 15px;
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 22px;
+    background: #fafafa;
+    border: 2px #fff solid;
+    :hover {
+      // background: red;
+    }
+    @media screen and (max-width: @screen-sm) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .showText {
+    color: @font-color-3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'PingFang SC';
+    line-height: 22px;
+  }
+
+  .leagueRanking {
+    display: flex;
+    align-items: center;
+
+    .position {
+      color: @font-color-0;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Barlow';
+      font-style: italic;
+      line-height: 26px;
+    }
+
+    .logo {
+      width: 22px;
+      height: 22px;
+      margin: auto 12px;
+      vertical-align: middle;
+    }
+  }
+}

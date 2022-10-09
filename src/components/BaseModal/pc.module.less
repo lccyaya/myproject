@@ -1,0 +1,30 @@
+.modal {
+  :global {
+    .ant-modal-content {
+      border-radius: 16px;
+      padding: 18px 32px 32px !important;
+    }
+    .ant-modal-header {
+      border-radius: 16px 16px 0 0;
+      border: none;
+    }
+    .ant-modal-title {
+      text-align: center;
+      color: #000;
+      font-size: 22px !important;
+    }
+    .ant-modal-body {
+      padding: 0 !important;
+    }
+  }
+  &.hide_bg {
+    :global {
+      .ant-modal-content {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+    }
+    
+  }
+}
